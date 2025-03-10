@@ -20,4 +20,4 @@ Projektissa tullaan käyttämään tietokantoja. Tietokantoihin tullaan tallenta
 
 ## 5. Projektinhallinta ja käyttäjätestaus
 
-Projektinhallinnassa käytetään githubia. Työhön käytettyä aikaa seurataan githubissa olevaan tiedostoon.
+Projektinhallinnassa käytetään githubia. Työhön käytettyä aikaa seurataan githubissa olevaan tiedostoon. Prototyypillä tullaan testaamaan käytettävyyttä ja ymmärrettävyyttä. Käyttäjätestillä on myös tarkoituksena ennustaa mahdollisia tulevia käytettävyys ongelmia.
