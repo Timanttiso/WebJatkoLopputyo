@@ -16,7 +16,7 @@ Add something
 
 ## 4. Tietoarkkitehtuuri ja tekninen suunnittelu
 
-Add something
+Projektissa tullaan käyttämään tietokantoja. Tietokantoihin tullaan tallentamaan tuotetietoja ja käyttäjän ostoskori. Ohjelma toteutetaan Reactilla.
 
 ## 5. Projektinhallinta ja käyttäjätestaus
 
