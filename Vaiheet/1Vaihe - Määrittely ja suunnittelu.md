@@ -14,10 +14,6 @@ Add something
 
 Add something
 
-![KahviLaitePaperi](https://github.com/user-attachments/assets/31a2a7cc-5859-4d39-9b2a-3a6002fca05a)
-
-
-
 ## 4. Tietoarkkitehtuuri ja tekninen suunnittelu
 
 Add something
