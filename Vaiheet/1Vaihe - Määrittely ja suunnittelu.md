@@ -13,7 +13,8 @@ Add something
 ## 3. UI prototyypit
 
 Add something
-![image](https://github.com/user-attachments/assets/b793fba0-0346-46f0-b327-f1c7e33e5e20)
+
+![KahviLaitePaperi](https://github.com/user-attachments/assets/31a2a7cc-5859-4d39-9b2a-3a6002fca05a)
 
 
 
