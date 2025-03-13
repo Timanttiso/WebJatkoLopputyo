@@ -40,6 +40,13 @@ Käyttäytyminen: Ostaa testattuja, ammattilaisten suosittelemia tuotteita, joil
                  | ---------> (Tuotteiden muokkaaminen)
                  | ---------> (Tuotteiden poistaminen)
 ```
+Käyttötapaus: käyttäjä etsii edullista näytönohjainta.\
+Käyttötilanne: Käyttäjä etsii hakupalkista näytönohjainta ja järjestää tuotteet halvimmasta kalleimpaan\
+
+Käyttötapaus: käyttäjä haluaa valita tuotteita ja miettiä ostosta.\
+Käyttötilanteita:\
+ - Käyttäjä lisää yhden tai useamman tuotteen ostoskoriin mutta ei vielä osta\
+ - Käyttäjä vertailee eri tuotteita ostoskorissa
 
 ## 3. UI prototyypit
 
