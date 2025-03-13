@@ -55,7 +55,7 @@ Käyttötilanteita:
 
 ## 4. Tietoarkkitehtuuri ja tekninen suunnittelu
 
-Projektissa tullaan käyttämään tietokantoja. Tietokantoihin tullaan tallentamaan tuotetietoja ja session ostoskori. Admini sivulta voi lisätä tuotteita. Kun tuote lisätään se lisätään tietokantaan ja se löytyy sitten etusivulta. Käyttöliittymä toteutetaan Reactilla. Ohjelmassa tullaan käyttämään SQLiteä. Projektin ympäristönä käytetään paikallista. virtuaalikonetta. Taustajärjestelmänä on Node.
+Projektissa tullaan käyttämään tietokantoja. Tietokantoihin tullaan tallentamaan tuotetietoja ja session ostoskori. Admini sivulta voi lisätä tuotteita. Kun tuote lisätään se lisätään tietokantaan ja se löytyy sitten etusivulta. Käyttöliittymä toteutetaan Reactilla. Ohjelmassa tullaan käyttämään SQLiteä. Projektin ympäristönä käytetään paikallista virtuaalikonetta. Taustajärjestelmänä on Node.
 
 ## 5. Projektinhallinta ja käyttäjätestaus
 
