@@ -19,7 +19,25 @@ Käyttäytyminen: Ostaa testattuja, ammattilaisten suosittelemia tuotteita, joil
 
 ## 2. Käyttötapaukset ja käyttötilanteet
 
-Add something
+```
+          +----------------+
+          |     Asiakas    |
+          +----------------+
+                 |
+                 | ---------> (Tuotteiden selaaminen)
+                 | ---------> (Tuotteiden haku)
+                 | ---------> (Ostoskoriin lisääminen)
+                 | ---------> (Ostoskorista poistaminen)
+                 | ---------> (Ostaminen/Maksaminen)
+                 
+          +----------------------------+
+          |    Järjestelmän valvoja    |
+          +----------------------------+
+                 |
+                 | ---------> (Tuotteiden lisääminen)
+                 | ---------> (Tuotteiden muokkaaminen)
+                 | ---------> (Tuotteiden poistaminen)
+```
 
 ## 3. UI prototyypit
 
