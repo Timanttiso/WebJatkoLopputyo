@@ -5,7 +5,7 @@ Tässä tiedostossa käydään läpi projektin suunitelmaa. Projekti tulee olema
 ## 1. Käyttäjä Persoonat
 
 ### PC rakentaja
-Nimi: Toni 22 v
+Nimi: Toni 22 v\
 Tausta: opiskelija, joka rakentaa ensimmäistä tietokonetta
 Tavoitteet: Löytää edullisia komponentteja
 Käyttäytyminen: seuraa uutuuksia, alennuksia ja arvosteluita
