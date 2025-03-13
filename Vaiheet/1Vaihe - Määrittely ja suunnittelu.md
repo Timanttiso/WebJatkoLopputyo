@@ -23,6 +23,7 @@ Add something
 
 ## 3. UI prototyypit
 
+![20250313_144105](https://github.com/user-attachments/assets/976aab3c-18eb-4a52-bec4-4514ab4416bf)
 
 
 ## 4. Tietoarkkitehtuuri ja tekninen suunnittelu
