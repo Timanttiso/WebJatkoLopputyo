@@ -8,12 +8,14 @@ Tässä tiedostossa käydään läpi projektin suunitelmaa. Projekti tulee olema
 Nimi: Toni 22 v\
 Tausta: opiskelija, joka rakentaa ensimmäistä tietokonetta.\
 Tavoitteet: Löytää edullisia komponentteja.\
+Ammatti/koulutus: It-alan opiskelija\
 Käyttäytyminen: seuraa uutuuksia, alennuksia ja arvosteluita.
 
 ### Kilpapelaaja
 Nimi: Mikael 18 v\
 Tausta: E-urheiluun panostava nuori, joka haluaa tehokkaan pelitietokoneen.\
 Tavoitteet: Etsii uusia osia päivittämään vanhaa pelikonettansa.\
+Ammatti/koulutus: E-urheilija\
 Käyttäytyminen: Ostaa testattuja, ammattilaisten suosittelemia tuotteita, joilla on hyvät arvostelut.
 
 
