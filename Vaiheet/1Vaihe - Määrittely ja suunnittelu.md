@@ -23,11 +23,11 @@ Add something
 
 ## 3. UI prototyypit
 
-Add something
+
 
 ## 4. Tietoarkkitehtuuri ja tekninen suunnittelu
 
-Projektissa tullaan käyttämään tietokantoja. Tietokantoihin tullaan tallentamaan tuotetietoja ja käyttäjän ostoskori. Ohjelma toteutetaan Reactilla.
+Projektissa tullaan käyttämään tietokantoja. Tietokantoihin tullaan tallentamaan tuotetietoja ja session ostoskori. Admini sivulta voi lisätä tuotteita. Kun tuote lisätään se lisätään tietokantaan ja se löytyy sitten etusivulta. Ohjelma toteutetaan Reactilla.
 
 ## 5. Projektinhallinta ja käyttäjätestaus
 
