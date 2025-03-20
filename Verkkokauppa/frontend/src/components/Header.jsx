@@ -5,7 +5,7 @@ const Header = () => {
       <div>
         <header>
               <h1>Verkkokauppa</h1> 
-              <button><img src={shoppingCartimage}/></button>
+              <button><img src={shoppingCartimage}  class="shoppingCart"/></button>
         </header>
       </div>
     )
