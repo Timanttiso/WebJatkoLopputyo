@@ -26,37 +26,37 @@ db.run(`CREATE TABLE IF NOT EXISTS products (
   productName TEXT,
   price NUMBER,
   description TEXT,
-  image TEXT
+  imageLink TEXT
 )`);
 
 //Alustaa shoppingCart tablen
 db.run(`CREATE TABLE IF NOT EXISTS shoppingCart (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    sessionID TEXT
-    productname TEXT,
+    sessionID TEXT,
+    productName TEXT,
     price NUMBER,
     description TEXT,
-    image TEXT
+    imageLink TEXT
 )`);
   
 //Toiminnot products tablelle
-app.post('/contactRequests', (req, res) => {
-  const { name, email, phonenumber, reason } = req.body;
-  if (!name || !email || !phonenumber || !reason) {
-    return res.status(400).json({ error: 'Nimi, sähköposti, puhelinnumero ja syy vaaditaan' });
+app.post('/products', (req, res) => {
+  const { productName, price, description, imageLink } = req.body;
+  if (!productName || !price || !description || !imageLink) {
+    return res.status(400).json({ error: 'Tarvitaan nimi, hinta, kuvaus ja linkki kuvaan' });
   }
 
-  const query = `INSERT INTO contactRequests (name, email, phonenumber, reason) VALUES (?, ?, ?, ?)`;
-  db.run(query, [name, email, phonenumber, reason], function (err) {
+  const query = `INSERT INTO products (productName, price, description, imageLink) VALUES (?, ?, ?, ?)`;
+  db.run(query, [productName, price, description, imageLink], function (err) {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
-    res.status(201).json({ id: this.lastID, name, email, phonenumber, reason});
+    res.status(201).json({ id: this.lastID, productName, price, description, imageLink});
   });
 });
 
-app.get('/contactRequests', (req, res) => {
-    db.all('SELECT * FROM contactRequests', [], (err, rows) => {
+app.get('/products', (req, res) => {
+    db.all('SELECT * FROM products', [], (err, rows) => {
       if (err) {
         return res.status(500).json({ error: err.message });
       }
@@ -64,59 +64,60 @@ app.get('/contactRequests', (req, res) => {
     });
 });
 
-app.put('/contactRequests/:id', (req, res) => {
-    const { name, email, phonenumber, reason } = req.body;
+app.put('/products/:id', (req, res) => {
+    const { productName, price, description, imageLink } = req.body;
     const { id } = req.params;
   
-    if (!name || !email || !phonenumber || !reason) {
-      return res.status(400).json({ error: 'Nimi, sähköposti, puhelinnumero ja syy vaaditaan' });
+    if (!productName || !price || !description || !imageLink) {
+      return res.status(400).json({ error: 'Tarvitaan nimi, hinta, kuvaus ja linkki kuvaan' });
     }
   
-    const query = `UPDATE contactRequests SET name = ?, email = ?, phonenumber = ?, reason = ? WHERE id = ?`;
-    db.run(query, [name, email, phonenumber, reason, id], function (err) {
+    const query = `UPDATE products SET productName = ?, price = ?, description = ?, imageLink = ? WHERE id = ?`;
+    db.run(query, [productName, price, description, imageLink, id], function (err) {
       if (err) {
         return res.status(500).json({ error: err.message });
       }
       if (this.changes === 0) {
-        return res.status(404).json({ error: 'Käyttäjää ei löytynyt' });
+        return res.status(404).json({ error: 'Tuotetta ei löytynyt' });
       }
-      res.json({ message: 'Käyttäjän tiedot päivitetty', id });
+      res.json({ message: 'Tuotteen tiedot päivitetty', id });
     });
 });
 
-app.delete('/contactRequests/:id', (req, res) => {
+app.delete('/products/:id', (req, res) => {
     const { id } = req.params;
   
-    db.run(`DELETE FROM contactRequests WHERE id = ?`, id, function (err) {
+    db.run(`DELETE FROM products WHERE id = ?`, id, function (err) {
       if (err) {
         return res.status(500).json({ error: err.message });
       }
       if (this.changes === 0) {
-        return res.status(404).json({ error: 'Käyttäjää ei löytynyt' });
+        return res.status(404).json({ error: 'Tuotetta ei löytynyt.' });
       }
-      res.json({ message: 'Käyttäjä poistettu', id });
+      res.json({ message: 'Tuote poistettu', id });
     });
 });
 
 //Toiminnot shoppingcartille
 
-app.post('/contactRequests', (req, res) => {
-    const { name, email, phonenumber, reason } = req.body;
-    if (!name || !email || !phonenumber || !reason) {
-      return res.status(400).json({ error: 'Nimi, sähköposti, puhelinnumero ja syy vaaditaan' });
+app.post('/shoppingCart', (req, res) => {
+    const { sessionID, productName, price, description, imageLink } = req.body;
+    if (!sessionID || !productName || !price || !description || imageLink) {
+      return res.status(400).json({ error: 'Sessio id, tuote nimi, hinta, kuvaus ja kuvan linkki tarvitaan' });
     }
   
-    const query = `INSERT INTO contactRequests (name, email, phonenumber, reason) VALUES (?, ?, ?, ?)`;
-    db.run(query, [name, email, phonenumber, reason], function (err) {
+    const query = `INSERT INTO shoppingCart (sessionID, productName, price, description, imageLink) VALUES (?, ?, ?, ?, ?)`;
+    db.run(query, [sessionID, productName, price, description, imageLink], function (err) {
       if (err) {
         return res.status(500).json({ error: err.message });
       }
-      res.status(201).json({ id: this.lastID, name, email, phonenumber, reason});
+      res.status(201).json({ id: this.lastID, sessionID, productName, price, description, imageLink});
     });
   });
   
-  app.get('/contactRequests', (req, res) => {
-      db.all('SELECT * FROM contactRequests', [], (err, rows) => {
+  app.get('/shoppingCart', (req, res) => {
+      const {sessionID} = req.params;
+      db.all('SELECT * FROM shoppingCart WHERE sessionID = ?', sessionID,[], (err, rows) => {
         if (err) {
           return res.status(500).json({ error: err.message });
         }
@@ -124,37 +125,17 @@ app.post('/contactRequests', (req, res) => {
       });
   });
   
-  app.put('/contactRequests/:id', (req, res) => {
-      const { name, email, phonenumber, reason } = req.body;
+  app.delete('/shoppingCart/:id', (req, res) => {
       const { id } = req.params;
     
-      if (!name || !email || !phonenumber || !reason) {
-        return res.status(400).json({ error: 'Nimi, sähköposti, puhelinnumero ja syy vaaditaan' });
-      }
-    
-      const query = `UPDATE contactRequests SET name = ?, email = ?, phonenumber = ?, reason = ? WHERE id = ?`;
-      db.run(query, [name, email, phonenumber, reason, id], function (err) {
+      db.run(`DELETE FROM shoppingCart WHERE id = ?`, id, function (err) {
         if (err) {
           return res.status(500).json({ error: err.message });
         }
         if (this.changes === 0) {
-          return res.status(404).json({ error: 'Käyttäjää ei löytynyt' });
+          return res.status(404).json({ error: 'Tuotetta ostoskärryssä ei löytynyt' });
         }
-        res.json({ message: 'Käyttäjän tiedot päivitetty', id });
-      });
-  });
-  
-  app.delete('/contactRequests/:id', (req, res) => {
-      const { id } = req.params;
-    
-      db.run(`DELETE FROM contactRequests WHERE id = ?`, id, function (err) {
-        if (err) {
-          return res.status(500).json({ error: err.message });
-        }
-        if (this.changes === 0) {
-          return res.status(404).json({ error: 'Käyttäjää ei löytynyt' });
-        }
-        res.json({ message: 'Käyttäjä poistettu', id });
+        res.json({ message: 'Tuote poistettu ostoskärrystä', id });
       });
   });
 
