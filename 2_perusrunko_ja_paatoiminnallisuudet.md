@@ -3,23 +3,23 @@ Add something
 
 ## 1. Ympäristö
 
-Add something
+Sovellus-ympäristö toteutetaan paikalliselle virtuaalikoneelle.
 
 ## 2. Backend
 
-Add something
+Backendissä käytetään nodea ja express kirjastoa. 
 
 ## 3. Frontend
 
-Add something
+Frontend toteutetaan Reactilla. Frontendissä on oltava components kansio, joka sisältää sovelluksessa käytettävät komponentit.
 
 ## 4. Tietokanta
 
-Add something
+Tietokanta on SQLite pohjainen. 
 
 ## 5. Perusrunko ja arkkitehtuuri
 
-Add something
+Frontendissä on components kansio, josta sovellukset osat tuodaan app.jsx tiedostoon. End to end testit tehdään erilliseen kansioon backendin ja frontendin ulkopuolelle.
 
 ## 6. Toiminnallisuudet
 
