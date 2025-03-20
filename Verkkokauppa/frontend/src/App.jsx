@@ -42,28 +42,30 @@ function App() {
     }
 
 
-  return (
-    <Router>
+    return (
+        <>
+            <Router>
 
-      <Routes>
-        <Route path="/" element={
-            <Header />
-            
-          } />
-        <h2>products</h2>
-        <div>{notificationMessage}</div>
-        <div id='products'>
-            {products.map(product =>
-                <Product key={product.id} product={product} productToDelete={deleteProduct} />
-            )}
-        </div>
-        <Route path="/shoppingcart" element={
-          <ShoppingCart />
+                <Routes>
+                    <Route path="/" element={
+                        <Header />
 
-          } />
-      </Routes>
-    </Router>
-  )
+                    } />
+                    <Route path="/shoppingcart" element={
+                        <ShoppingCart />
+
+                    } />
+                </Routes>
+            </Router>
+            <h2>products</h2>
+            <div>{notificationMessage}</div>
+            <div id='products'>
+                {products.map(product =>
+                    <Product key={product.id} product={product} productToDelete={deleteProduct} />
+                )}
+            </div>
+        </>
+    )
 }
 
 export default App
