@@ -32,7 +32,6 @@ db.run(`CREATE TABLE IF NOT EXISTS products (
 //Alustaa shoppingCart tablen
 db.run(`CREATE TABLE IF NOT EXISTS shoppingCart (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    sessionID TEXT,
     productName TEXT,
     price NUMBER,
     description TEXT,
@@ -101,23 +100,22 @@ app.delete('/products/:id', (req, res) => {
 //Toiminnot shoppingcartille
 
 app.post('/shoppingCart', (req, res) => {
-    const { sessionID, productName, price, description, imageLink } = req.body;
-    if (!sessionID || !productName || !price || !description || imageLink) {
+    const { productName, price, description, imageLink } = req.body;
+    if (!productName || !price || !description || imageLink) {
       return res.status(400).json({ error: 'Sessio id, tuote nimi, hinta, kuvaus ja kuvan linkki tarvitaan' });
     }
   
     const query = `INSERT INTO shoppingCart (sessionID, productName, price, description, imageLink) VALUES (?, ?, ?, ?, ?)`;
-    db.run(query, [sessionID, productName, price, description, imageLink], function (err) {
+    db.run(query, [productName, price, description, imageLink], function (err) {
       if (err) {
         return res.status(500).json({ error: err.message });
       }
-      res.status(201).json({ id: this.lastID, sessionID, productName, price, description, imageLink});
+      res.status(201).json({ id: this.lastID, productName, price, description, imageLink});
     });
   });
   
   app.get('/shoppingCart', (req, res) => {
-      const {sessionID} = req.params;
-      db.all('SELECT * FROM shoppingCart WHERE sessionID = ?', sessionID,[], (err, rows) => {
+      db.all('SELECT * FROM shoppingCart',[], (err, rows) => {
         if (err) {
           return res.status(500).json({ error: err.message });
         }

@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react'
-//import axios from 'axios'
-import './App.css'
-import Header from "./components/Header"
+import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import './App.css';
+import Header from "./components/Header";
+import ShoppingCart from "./ShoppingCart";
 import Product from "./components/Product"
 import productService from './services/products'
 
-
-const App = () => {
+function App() {
     const [products, setProducts] = useState([])
     const [notificationMessage, setNotificationMessage] = useState(null)
 
@@ -41,18 +41,29 @@ const App = () => {
         }
     }
 
-    return (
-        <>
+
+  return (
+    <Router>
+
+      <Routes>
+        <Route path="/" element={
             <Header />
-            <h2>products</h2>
-            <div>{notificationMessage}</div>
-            <div id='products'>
-                {products.map(product =>
-                    <Product key={product.id} product={product} productToDelete={deleteProduct} />
-                )}
-            </div>
-        </>
-    )
+            
+          } />
+        <h2>products</h2>
+        <div>{notificationMessage}</div>
+        <div id='products'>
+            {products.map(product =>
+                <Product key={product.id} product={product} productToDelete={deleteProduct} />
+            )}
+        </div>
+        <Route path="/shoppingcart" element={
+          <ShoppingCart />
+
+          } />
+      </Routes>
+    </Router>
+  )
 }
 
 export default App
