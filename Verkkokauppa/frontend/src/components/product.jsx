@@ -14,6 +14,7 @@ const Product = ({ product/*productToDelete*/ }) => {
             id: Product.id
         })
     }*/}
+    const [error, setError] = useState("");
     const [message, setMessage] = useState("");
     const addToShoppingCart = async () => {
         try {
@@ -46,6 +47,7 @@ const Product = ({ product/*productToDelete*/ }) => {
     let imagePath = `/productImages/${product.imageLink.split('/').pop()}`
     return (
         <div style={productStyle}>
+            {error}
             <div className='product'>
                 {product.productName} 
                 <div id='productInfo'>
