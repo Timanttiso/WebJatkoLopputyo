@@ -26,7 +26,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={
                         <>
-                            <Header id={"etusivu"}/>
+                            <Header />
                             <h2>products</h2>
                             <div id='products'>
                                 {products.map(product =>
