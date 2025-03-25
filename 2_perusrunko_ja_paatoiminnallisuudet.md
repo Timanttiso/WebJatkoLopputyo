@@ -19,7 +19,7 @@ Tietokanta on SQLite pohjainen. Tietokannassa on kaksi taulukkoa. Yksi tuotteill
 
 ## 5. Perusrunko ja arkkitehtuuri
 
-Frontendissä on components kansio, josta sovellusten osat tuodaan app.jsx tiedostoon. Mahdolliset end to end testit tehdään erilliseen kansioon backendin ja frontendin ulkopuolelle.
+Frontendissä on components kansio, josta sovellusten osat tuodaan app.jsx tiedostoon.
 
 ## 6. Toiminnallisuudet
 
@@ -27,11 +27,11 @@ Add something
 
 ## 7. Koodin laatu ja dokumentointi
 
-Add something
+Koodi kirjoitetaan ja kommentoidaan mahdollisimman selkeästi. 
 
 ## 8. Testaus ja virheenkäsittely
 
-Add something
+Projektissa käytetään yksikkötestejä ja jos aika riittää kurmittavuustestejä (k6) ja end to end testejä, jotka toteutetaan playwrightilla.
 
 ## 9. Käyttöliittymä ja vuorovaikutus
 
