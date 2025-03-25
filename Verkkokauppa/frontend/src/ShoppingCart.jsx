@@ -18,7 +18,7 @@ export default function ShoppingCart() {
     };
     useEffect(() => {
         fetchShoppingCart();
-    });
+    }, []);
 
 
     const goBack = () => {
