@@ -24,7 +24,10 @@ const Product = ({ product/*productToDelete*/ }) => {
                 description: product.description,
                 imageLink: product.imageLink
             });
-            //setMessage(product.productName)
+            setMessage(product.productName + " lisätty ostoskoriin!")
+            const timer = setTimeout(() => {
+                setMessage("");
+            }, 3000);
         } catch (err) {
             setError("Error adding item to shopping cart: " + (err.response?.data?.error || err.message));
         }
@@ -53,6 +56,7 @@ const Product = ({ product/*productToDelete*/ }) => {
                     <div>{product.description}</div>
                     {/*<div><button onClick={removeProduct}>remove</button></div>*/}
                     {<div><button onClick={addToShoppingCart}>Lisää Ostoskoriin</button></div>}
+                    {message && <p style={{color:"green"}}>{message}</p>}
                 </div>
             </div>
         </div>
