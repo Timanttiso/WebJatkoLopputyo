@@ -48,6 +48,12 @@ nav {
   text-align: center;
   float: center;
   justify-content: center;
+  cursor: pointer;
+}
+#verkkokauppa h1:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s ease-in-out;
+  color: #dfdfdf;
 }
 
 /* Ostoskorin painike */
