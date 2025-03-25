@@ -16,16 +16,14 @@ export default function ShoppingCart() {
             setError("Error fetching shoppingcart: " + (err.response?.data?.error || err.message));
         }
     };
-    /*
     const deleteFromShoppingCart = async (id) => {
         try {
-            const response =;
+            const response = await axios.delete("http://localhost:3000/shoppingCart/" + id);
             
         } catch (err) {
             setError("Error deleting an item from the shoppingcart: " + (err.response?.data?.error || err.message));
         }
     }
-        */
     useEffect(() => {
         fetchShoppingCart();
     }, []);
@@ -44,9 +42,10 @@ export default function ShoppingCart() {
             {error && <p>{error}</p>}
                 <ul>
                     {shoppingCart.map((product) => (
-                        <li key={product.id} class="shoppingCartList"><img style={imageStyle} src={`/productImages/${product.imageLink.split('/').pop()}`}></img>Nimi: {product.productName} Hinta: {product.price}   <button onClick={axios.delete("http://localhost:3000/shoppingCart/" + id)}>Poista korista</button></li>
+                        <li key={product.id} class="shoppingCartList"><img style={imageStyle} src={`/productImages/${product.imageLink.split('/').pop()}`}></img>Nimi: {product.productName} Hinta: {product.price}   <button onClick={() =>deleteFromShoppingCart(product.id)}>Poista korista</button></li>
                     ))} 
                 </ul>
+            <button class="checkout">Maksa tuotteet</button>
         </div>
     )
 }
