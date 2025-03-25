@@ -12,7 +12,7 @@ function Checkout() {
         return () => clearTimeout(timer);
     }, [navigate]);
 
-    return <p>Kiitos ostoksista</p>;
+    return <h1>Kiitos ostoksista!</h1>;
 }
 
 export default Checkout;
