@@ -15,7 +15,7 @@ Frontend toteutetaan Reactilla. Frontendissä on oltava components kansio, joka 
 
 ## 4. Tietokanta
 
-Tietokanta on SQLite pohjainen. 
+Tietokanta on SQLite pohjainen. Tietokannassa on kaksi taulukkoa. Yksi tuotteille ja toinen ostoskorille. Kummassakin taulukossa on id, tuotteen-nimi, tuotteen hinta, tuotteen kuvaus ja linkki tuotteen kuvaan.
 
 ## 5. Perusrunko ja arkkitehtuuri
 
