@@ -102,10 +102,10 @@ app.delete('/products/:id', (req, res) => {
 app.post('/shoppingCart', (req, res) => {
     const { productName, price, description, imageLink } = req.body;
     if (!productName || !price || !description || imageLink) {
-      return res.status(400).json({ error: 'Sessio id, tuote nimi, hinta, kuvaus ja kuvan linkki tarvitaan' });
+      return res.status(400).json({ error: 'tuote nimi, hinta, kuvaus ja kuvan linkki tarvitaan' });
     }
   
-    const query = `INSERT INTO shoppingCart (sessionID, productName, price, description, imageLink) VALUES (?, ?, ?, ?, ?)`;
+    const query = `INSERT INTO shoppingCart (productName, price, description, imageLink) VALUES (?, ?, ?, ?, ?)`;
     db.run(query, [productName, price, description, imageLink], function (err) {
       if (err) {
         return res.status(500).json({ error: err.message });

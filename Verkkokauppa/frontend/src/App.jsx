@@ -68,7 +68,13 @@ function App() {
                     } />
                 </Routes>
             </Router>
-            
+            <footer>
+                <h2>Tietoa Meistä</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur nisi id lorem elementum, consequat ornare lorem ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     Praesent vel pellentesque sem. Donec bibendum convallis leo. Sed eget mi pellentesque, maximus ipsum sit amet, placerat velit. Sed ut ipsum suscipit,
+                     ultricies enim bibendum, vehicula nisi. Vivamus erat quam, vestibulum ac massa vitae, eleifend bibendum nisi. Pellentesque malesuada erat commodo vehicula commodo.</p>
+                <p>©1999 - 2025 Verkkokauppa</p>
+            </footer>
         </>
     )
 }
