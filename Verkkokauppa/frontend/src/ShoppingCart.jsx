@@ -1,7 +1,7 @@
 import './App.css';
-import closeShoppingCartimage from "./icons/closeShoppingCart.png"
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Header from "./components/Header";
 
 export default function ShoppingCart() {
     const [shoppingCart, setShoppingCart] = useState([]);
@@ -39,12 +39,9 @@ export default function ShoppingCart() {
         width: 50,
         height: 50
     }
-    const goBack = () => {
-        window.location.href = "/"
-    }
     return (
         <div>
-            <button onClick ={goBack}><img src={closeShoppingCartimage} className="closeShoppingCart"/></button>
+            <Header id={"ostoskori"}/>
             <h1>Ostoskori</h1>
             {error && <p>{error}</p>}
                 <ul>
