@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
-
-const Product = ({ product, /*productToDelete*/ }) => {
+import axios from 'axios';
+import { useState } from 'react';
+const Product = ({ product/*productToDelete*/ }) => {
 
     {/*const removeProduct = (event) => {
         event.preventDefault()
@@ -13,7 +14,21 @@ const Product = ({ product, /*productToDelete*/ }) => {
             id: Product.id
         })
     }*/}
-
+    const [error, setError] = useState("");
+    const [message, setMessage] = useState("");
+    const addToShoppingCart = async () => {
+        try {
+            const response = await axios.post("http://localhost:3000/shoppingCart",{
+                productName: product.productName,
+                price: product.price,
+                description: product.description,
+                imageLink: product.imageLink
+            });
+            //setMessage(product.productName)
+        } catch (err) {
+            setError("Error adding item to shopping cart: " + (err.response?.data?.error || err.message));
+        }
+    }
     const productStyle = {
         paddingTop: 10,
         paddingLeft: 2,
@@ -37,6 +52,7 @@ const Product = ({ product, /*productToDelete*/ }) => {
                     <strong>Hinta: </strong>{product.price} <a> €</a>
                     {/*<div>{product.description}</div>*/}
                     {/*<div><button onClick={removeProduct}>remove</button></div>*/}
+                    {<div><button onClick={addToShoppingCart}>Lisää Ostoskoriin</button></div>}
                 </div>
             </div>
         </div>
