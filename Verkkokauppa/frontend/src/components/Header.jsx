@@ -15,7 +15,7 @@ const Header = ({ id }) => {
             <header>
                 <nav>
                     <ul id="navigation">
-                        <li id="verkkokauppa"><h1>Verkkokauppa</h1></li>
+                        <li id="verkkokauppa"><h1 onClick={goBack}>Verkkokauppa</h1></li>
                         <li><button onClick={openShoppingCart}><img src={shoppingCartimage} className="shoppingCart" /></button></li>
                     </ul>
                 </nav>
@@ -27,7 +27,7 @@ const Header = ({ id }) => {
             <header>
                 <nav>
                     <ul id="navigation">
-                        <li id="verkkokauppa"><h1>Verkkokauppa</h1></li>
+                        <li id="verkkokauppa"><h1 onClick={goBack}>Verkkokauppa</h1></li>
                         <button onClick ={goBack}><img src={closeShoppingCartimage} className="closeShoppingCart"/></button>
                     </ul>
                 </nav>
