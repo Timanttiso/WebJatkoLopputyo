@@ -18,11 +18,18 @@ export default function ShoppingCart() {
     };
     const deleteFromShoppingCart = async (id) => {
         try {
-            const response = await axios.delete("http://localhost:3000/shoppingCart/" + id);
+            await axios.delete("http://localhost:3000/shoppingCart/" + id);
+            const response = await axios.get("http://localhost:3000/shoppingCart");
+            setShoppingCart(response.data);
             
         } catch (err) {
             setError("Error deleting an item from the shoppingcart: " + (err.response?.data?.error || err.message));
         }
+    }
+    const buyStuff = async () =>{
+        await axios.delete("http://localhost:3000/shoppingCart");
+        window.location.href = "/checkout"
+
     }
     useEffect(() => {
         fetchShoppingCart();
@@ -42,10 +49,10 @@ export default function ShoppingCart() {
             {error && <p>{error}</p>}
                 <ul>
                     {shoppingCart.map((product) => (
-                        <li key={product.id} class="shoppingCartList"><img style={imageStyle} src={`/productImages/${product.imageLink.split('/').pop()}`}></img>Nimi: {product.productName} Hinta: {product.price}   <button onClick={() =>deleteFromShoppingCart(product.id)}>Poista korista</button></li>
+                        <li key={product.id} className="shoppingCartList"><img style={imageStyle} src={`/productImages/${product.imageLink.split('/').pop()}`}></img>Nimi: {product.productName} Hinta: {product.price}   <button onClick={() =>deleteFromShoppingCart(product.id)}>Poista korista</button></li>
                     ))} 
                 </ul>
-            <button class="checkout">Maksa tuotteet</button>
+            <button className="checkout" onClick={() => buyStuff}>Maksa tuotteet</button>
         </div>
     )
 }

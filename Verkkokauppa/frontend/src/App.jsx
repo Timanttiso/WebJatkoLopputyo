@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import ShoppingCart from "./ShoppingCart";
 import Product from "./components/Product"
 import productService from './services/products'
-
+import Checkout from './checkout';
 function App() {
     const [products, setProducts] = useState([])
     const [notificationMessage, setNotificationMessage] = useState(null)
@@ -41,7 +41,6 @@ function App() {
         }
     }
 
-
     return (
         <>
             <Router>
@@ -62,6 +61,13 @@ function App() {
                     <Route path="/shoppingcart" element={
                         <>
                             <ShoppingCart />
+                        </>
+                        
+
+                    } />
+                    <Route path="/checkout" element={
+                        <>
+                            <Checkout/>
                         </>
                         
 
