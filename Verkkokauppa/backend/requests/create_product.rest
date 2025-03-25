@@ -1,0 +1,9 @@
+POST http://localhost:3000/products
+content-type: application/json
+
+{
+    "productName": "Baked computer",
+    "price": 999,
+    "description": "BAKED BEANS",
+    "imageLink": "BakedBeans.jpg"
+}
