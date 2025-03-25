@@ -14,18 +14,17 @@ const Product = ({ product/*productToDelete*/ }) => {
             id: Product.id
         })
     }*/}
-    const [error, setError] = useState("");
     const [message, setMessage] = useState("");
     const addToShoppingCart = async () => {
         try {
-            const response = await axios.post("http://localhost:3000/shoppingCart",{
+            await axios.post("http://localhost:3000/shoppingCart",{
                 productName: product.productName,
                 price: product.price,
                 description: product.description,
                 imageLink: product.imageLink
             });
             setMessage(product.productName + " lisätty ostoskoriin!")
-            const timer = setTimeout(() => {
+            setTimeout(() => {
                 setMessage("");
             }, 3000);
         } catch (err) {
