@@ -48,22 +48,27 @@ function App() {
 
                 <Routes>
                     <Route path="/" element={
-                        <Header />
-
+                        <>
+                            <Header />
+                            <h2>products</h2>
+                            <div>{notificationMessage}</div>
+                            <div id='products'>
+                                {products.map(product =>
+                                    <Product key={product.id} product={product} productToDelete={deleteProduct} />
+                                )}
+                            </div>
+                        </>
                     } />
                     <Route path="/shoppingcart" element={
-                        <ShoppingCart />
+                        <>
+                            <ShoppingCart />
+                        </>
+                        
 
                     } />
                 </Routes>
             </Router>
-            <h2>products</h2>
-            <div>{notificationMessage}</div>
-            <div id='products'>
-                {products.map(product =>
-                    <Product key={product.id} product={product} productToDelete={deleteProduct} />
-                )}
-            </div>
+            
         </>
     )
 }
