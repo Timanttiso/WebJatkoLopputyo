@@ -35,4 +35,4 @@ Projektissa käytetään yksikkötestejä ja jos aika riittää kurmittavuustest
 
 ## 9. Käyttöliittymä ja vuorovaikutus
 
-Ohjelman pää käyttöliittymään tulee lista tuotteista. Ostoskoriin pääsee klikkaamalla ostoskori nappia. Ostoskorista pääsee takaisin klikkaamalla takaisin nappia. Ostoskorissa on lista tuotteista, joissa on poisto nappi, jotta tuotteet voi poistaa. Pääsivulla klikkaamalla tuotetta listassa se avaa tuotteen oman sivun, josta näkee tuotteen tietoja, kuten kuvaus, hinta ja nimi. Klikkaamalla lisää ostoskoriin nappia tuote menee ostoskoriin. Tuoteen sivulla klikkamalla takaisin nappia pääsee takaisin etusivulle.
+Ohjelman pää käyttöliittymään tulee lista tuotteista. Ostoskoriin pääsee klikkaamalla ostoskori nappia. Ostoskorista pääsee takaisin klikkaamalla verkkokaupan nimeä headerissä. Ostoskorissa on lista tuotteista, joissa on poisto nappi, jotta tuotteet voi poistaa. Pääsivulla klikkaamalla tuotetta listassa se avaa tuotteen oman sivun, josta näkee tuotteen tietoja, kuten kuvaus, hinta ja nimi. Klikkaamalla lisää ostoskoriin nappia tuote menee ostoskoriin. Tuoteen sivulla klikkamalla takaisin nappia pääsee takaisin etusivulle.

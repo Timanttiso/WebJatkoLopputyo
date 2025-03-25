@@ -1,19 +1,7 @@
 import PropTypes from 'prop-types'
 import axios from 'axios';
 import { useState } from 'react';
-const Product = ({ product/*productToDelete*/ }) => {
-
-    {/*const removeProduct = (event) => {
-        event.preventDefault()
-
-        productToDelete({
-            productName: product.productName,
-            description: product.description,
-            imageLink: product.imageLink,
-            price: product.price,
-            id: Product.id
-        })
-    }*/}
+const Product = ({ product }) => {
     const [error, setError] = useState("");
     const [message, setMessage] = useState("");
     const addToShoppingCart = async () => {

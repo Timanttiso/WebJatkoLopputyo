@@ -8,7 +8,6 @@ import productService from './services/products'
 import Checkout from './checkout';
 function App() {
     const [products, setProducts] = useState([])
-    const [notificationMessage, setNotificationMessage] = useState(null)
 
     useEffect(() => {
         productService.getAll().then(response => {
@@ -20,27 +19,6 @@ function App() {
         }).catch(error => console.error("Error fetching products:", error))
     }, [])
 
-    const deleteProduct = async (productToDelete) => {
-        if (window.confirm(`Remove product ${productToDelete.productName}`)) {
-            try {
-                await productService.remove(productToDelete.id)
-                await productService.getAll().then(products => setProducts(products))
-
-                setNotificationMessage(
-                    `product ${productToDelete.productName} removed`
-                )
-                setTimeout(() => {
-                    setNotificationMessage(null)
-                }, 3000)
-            } catch (exception) {
-                setNotificationMessage(exception.message)
-                setTimeout(() => {
-                    setNotificationMessage(null)
-                }, 3000)
-            }
-        }
-    }
-
     return (
         <>
             <Router>
@@ -48,12 +26,11 @@ function App() {
                 <Routes>
                     <Route path="/" element={
                         <>
-                            <Header id={"etusivu"}/>
+                            <Header />
                             <h2>products</h2>
-                            <div>{notificationMessage}</div>
                             <div id='products'>
                                 {products.map(product =>
-                                    <Product key={product.id} product={product} productToDelete={deleteProduct} />
+                                    <Product key={product.id} product={product} />
                                 )}
                             </div>
                         </>
