@@ -19,7 +19,7 @@ Tietokanta on SQLite pohjainen.
 
 ## 5. Perusrunko ja arkkitehtuuri
 
-Frontendissä on components kansio, josta sovellukset osat tuodaan app.jsx tiedostoon. End to end testit tehdään erilliseen kansioon backendin ja frontendin ulkopuolelle.
+Frontendissä on components kansio, josta sovellusten osat tuodaan app.jsx tiedostoon. Mahdolliset end to end testit tehdään erilliseen kansioon backendin ja frontendin ulkopuolelle.
 
 ## 6. Toiminnallisuudet
 
