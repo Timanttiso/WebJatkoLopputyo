@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 
-const Product = ({ product, productToDelete }) => {
+const Product = ({ product, /*productToDelete*/ }) => {
 
-    const removeProduct = (event) => {
+    {/*const removeProduct = (event) => {
         event.preventDefault()
 
         productToDelete({
@@ -12,7 +12,7 @@ const Product = ({ product, productToDelete }) => {
             price: product.price,
             id: Product.id
         })
-    }
+    }*/}
 
     const productStyle = {
         paddingTop: 10,
@@ -30,11 +30,13 @@ const Product = ({ product, productToDelete }) => {
     return (
         <div style={productStyle}>
             <div className='product'>
-                {product.productName} {product.price}
+                {product.productName} 
                 <div id='productInfo'>
                     <img style={imageStyle} src={imagePath} alt={product.productName} />
+                    <br />
+                    <strong>Hinta: </strong>{product.price} <a> €</a>
                     <div>{product.description}</div>
-                    <div><button onClick={removeProduct}>remove</button></div>
+                    {/*<div><button onClick={removeProduct}>remove</button></div>*/}
                 </div>
             </div>
         </div>
