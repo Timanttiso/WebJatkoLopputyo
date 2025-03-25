@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
-
-const Product = ({ product, /*productToDelete*/ }) => {
+import axios from 'axios';
+import { useState } from 'react';
+const Product = ({ product/*productToDelete*/ }) => {
 
     {/*const removeProduct = (event) => {
         event.preventDefault()
@@ -13,7 +14,6 @@ const Product = ({ product, /*productToDelete*/ }) => {
             id: Product.id
         })
     }*/}
-<<<<<<< HEAD
     const [error, setError] = useState("");
     const [message, setMessage] = useState("");
     const addToShoppingCart = async () => {
@@ -32,9 +32,6 @@ const Product = ({ product, /*productToDelete*/ }) => {
             setError("Error adding item to shopping cart: " + (err.response?.data?.error || err.message));
         }
     }
-=======
-
->>>>>>> 35c698d39dd6f74acd99d2b2ffed7f9862e7ca69
     const productStyle = {
         paddingTop: 10,
         paddingLeft: 2,
@@ -58,11 +55,8 @@ const Product = ({ product, /*productToDelete*/ }) => {
                     <strong>Hinta: </strong>{product.price} <a> €</a>
                     <div>{product.description}</div>
                     {/*<div><button onClick={removeProduct}>remove</button></div>*/}
-<<<<<<< HEAD
                     {<div><button onClick={addToShoppingCart}>Lisää Ostoskoriin</button></div>}
                     {message && <p style={{color:"green"}}>{message}</p>}
-=======
->>>>>>> 35c698d39dd6f74acd99d2b2ffed7f9862e7ca69
                 </div>
             </div>
         </div>
