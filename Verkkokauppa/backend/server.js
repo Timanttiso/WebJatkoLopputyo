@@ -137,6 +137,17 @@ app.post('/shoppingCart', (req, res) => {
       });
   });
 
+  app.delete('/shoppingCart', (req, res) => {
+    db.run(`DELETE * FROM shoppingCart`, function (err) {
+      if (err) {
+        return res.status(500).json({ error: err.message });
+      }
+      if (this.changes === 0) {
+        return res.status(404).json({ error: 'Tuotetta ostoskärryssä ei löytynyt' });
+      }
+      res.json({ message: 'Tuotteet poistettu ostoskärrystä', id });
+    });
+});
 
 app.listen(port, () => {
   console.log(`Palvelin käynnissä osoitteessa http://localhost:${port}`);
