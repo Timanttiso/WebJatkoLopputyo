@@ -1,12 +1,102 @@
-.shoppingCart{
+.shoppingCart {
   height: 25px;
   width: 25px;
 }
-.closeShoppingCart{
+
+.closeShoppingCart {
   height: 10px;
   width: 10px;
 }
-.checkout{
+
+.checkout {
   color: black;
   background: green;
+}
+
+header {
+  background-color: green;
+}
+nav,
+ul {
+  display: inline;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  background-color: #003b49;
+  margin: 10px;
+  padding: 0.6rem;
+  font-size: 20px;
+  border-radius: 5px;
+  border: solid;
+}
+
+li a {
+  color: #f2c75c;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Yleiset tyylit */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tuotteen tyyli */
+.product {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+/* Tuotekuva */
+.product img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Tuotetiedot */
+#productInfo {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Hinnan tyyli */
+#productInfo strong {
+  color: #d9534f;
+  font-size: 20px;
+}
+
+/* Osta-painike */
+button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #218838;
 }

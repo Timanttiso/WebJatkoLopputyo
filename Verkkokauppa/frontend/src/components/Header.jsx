@@ -3,16 +3,17 @@ import shoppingCartimage from "../icons/shoppingCart.png"
 
 const Header = () => {
     const openShoppingCart = () => {
-      window.location.href = "/shoppingcart"
+        window.location.href = "/shoppingcart"
     }
-    return( 
-      
-      <div>
+    return (
         <header>
-              <h1>Verkkokauppa</h1> 
-              <button onClick ={openShoppingCart}><img src={shoppingCartimage} className="shoppingCart"/></button>
+            <nav>
+                <ul id="navigation">
+                    <li><h1>Verkkokauppa</h1> </li>
+                    <li><button onClick={openShoppingCart}><img src={shoppingCartimage} className="shoppingCart" /></button></li>
+                </ul>
+            </nav>
         </header>
-      </div>
     )
 }
 export default Header;
