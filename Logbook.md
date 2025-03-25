@@ -8,4 +8,4 @@
 |  20.3.2025 | 5h | Etusivun ja ostoskorin alustus  | Backend luotu, frontend perusrunko, komponentteja tehty |
 |  25.3.2025 | 4h | Etusivun ja ostoskorin viimeistely plus toisen suunitelman kirjoitus  | Etusivulle lisätty lisää ostoskoriin nappi ja sen toiminnot tehty, Poista nappi ostoskorin tuotteisiin ja sen toiminta tehty, Ostoskoriin ostonappi ja sen toiminnot. CSS paranneltu. |
 
-Tunteja käytetty yhteensä: 8,5h
+Tunteja käytetty yhteensä: 12,5h
