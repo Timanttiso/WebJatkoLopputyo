@@ -26,8 +26,8 @@ export default function ShoppingCart() {
             setError("Error deleting an item from the shoppingcart: " + (err.response?.data?.error || err.message));
         }
     }
-    const buyStuff = async () =>{
-        await axios.delete("http://localhost:3000/shoppingCart");
+    const buyStuff =  () =>{
+        axios.delete("http://localhost:3000/shoppingCart");
         window.location.href = "/checkout"
 
     }
@@ -52,7 +52,7 @@ export default function ShoppingCart() {
                         <li key={product.id} className="shoppingCartList"><img style={imageStyle} src={`/productImages/${product.imageLink.split('/').pop()}`}></img>Nimi: {product.productName} Hinta: {product.price}   <button onClick={() =>deleteFromShoppingCart(product.id)}>Poista korista</button></li>
                     ))} 
                 </ul>
-            <button className="checkout" onClick={() => buyStuff}>Maksa tuotteet</button>
+            <button className="checkout" onClick={buyStuff}>Maksa tuotteet</button>
         </div>
     )
 }
