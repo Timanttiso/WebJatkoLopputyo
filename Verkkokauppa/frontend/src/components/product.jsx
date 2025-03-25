@@ -35,7 +35,7 @@ const Product = ({ product, /*productToDelete*/ }) => {
                     <img style={imageStyle} src={imagePath} alt={product.productName} />
                     <br />
                     <strong>Hinta: </strong>{product.price} <a> €</a>
-                    <div>{product.description}</div>
+                    {/*<div>{product.description}</div>*/}
                     {/*<div><button onClick={removeProduct}>remove</button></div>*/}
                 </div>
             </div>
