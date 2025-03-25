@@ -49,7 +49,7 @@ export default function ShoppingCart() {
             {error && <p>{error}</p>}
                 <ul>
                     {shoppingCart.map((product) => (
-                        <li key={product.id} className="shoppingCartList"><img style={imageStyle} src={`/productImages/${product.imageLink.split('/').pop()}`}></img>Nimi: {product.productName} Hinta: {product.price}   <button onClick={() =>deleteFromShoppingCart(product.id)}>Poista korista</button></li>
+                        <li key={product.id} className="shoppingCartList"><img style={imageStyle} src={`/productImages/${product.imageLink.split('/').pop()}`}></img>Nimi: {product.productName} Hinta: {product.price} €  <button onClick={() =>deleteFromShoppingCart(product.id)}>Poista korista</button></li>
                     ))} 
                 </ul>
             <button className="checkout" onClick={buyStuff}>Maksa tuotteet</button>
