@@ -1,6 +1,7 @@
 .shoppingCart {
   height: 25px;
   width: 25px;
+  filter: invert(100%);
 }
 
 .closeShoppingCart {
@@ -13,32 +14,52 @@
   background: green;
 }
 
+/* Yleiset tyylit */
 header {
-  background-color: green;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  padding: 15px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-nav,
-ul {
-  display: inline;
-  margin: 0 auto;
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+#navigation {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 0;
-  list-style-type: none;
+  margin: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+#navigation li {
+  padding: 10px 20px;
+}
+
+#verkkokauppa h1 {
+  font-size: 24px;
+  color: white;
+  margin: 0;
   text-align: center;
+  float: center;
+  justify-content: center;
 }
 
-li {
-  display: inline-block;
-  background-color: #003b49;
-  margin: 10px;
-  padding: 0.6rem;
-  font-size: 20px;
-  border-radius: 5px;
-  border: solid;
+/* Ostoskorin painike */
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
 
-li a {
-  color: #f2c75c;
-  text-decoration: none;
-  text-transform: uppercase;
+button:hover {
+  transform: scale(1.1);
 }
 
 /* Yleiset tyylit */

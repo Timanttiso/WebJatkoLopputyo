@@ -48,7 +48,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={
                         <>
-                            <Header />
+                            <Header id={"etusivu"}/>
                             <h2>products</h2>
                             <div>{notificationMessage}</div>
                             <div id='products'>
