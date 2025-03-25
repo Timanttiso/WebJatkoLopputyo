@@ -1,5 +1,5 @@
 # Vaihe 2 - Perusrunko ja päätoiminnallisuudet
-Add something
+Tässä versiossa ohjelmaan tullaan tekemään ohjelman perustoiminnot ja runko.
 
 ## 1. Ympäristö
 
@@ -23,7 +23,7 @@ Frontendissä on components kansio, josta sovellusten osat tuodaan app.jsx tiedo
 
 ## 6. Toiminnallisuudet
 
-Add something
+Sovelluksessa toimintoja on esim. Tuotteiden listaus etusivulle, tuotteiden omien sivujen avaaminen, tuotteen lisääminen ostoskoriin ja tuotteen poistaminen ostoskorista. 
 
 ## 7. Koodin laatu ja dokumentointi
 
@@ -35,4 +35,4 @@ Projektissa käytetään yksikkötestejä ja jos aika riittää kurmittavuustest
 
 ## 9. Käyttöliittymä ja vuorovaikutus
 
-Add something
+Ohjelman pää käyttöliittymään tulee lista tuotteista. Ostoskoriin pääsee klikkaamalla ostoskori nappia. Ostoskorista pääsee takaisin klikkaamalla takaisin nappia. Ostoskorissa on lista tuotteista, joissa on poisto nappi, jotta tuotteet voi poistaa. Pääsivulla klikkaamalla tuotetta listassa se avaa tuotteen oman sivun, josta näkee tuotteen tietoja, kuten kuvaus, hinta ja nimi. Klikkaamalla lisää ostoskoriin nappia tuote menee ostoskoriin. Tuoteen sivulla klikkamalla takaisin nappia pääsee takaisin etusivulle.
