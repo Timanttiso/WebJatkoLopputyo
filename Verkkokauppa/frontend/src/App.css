@@ -129,6 +129,11 @@ body {
   font-size: 20px;
 }
 
+#productOpenButton{
+  cursor: pointer;
+}
+
+
 /* Osta-painike */
 button {
   background-color: #28a745;
