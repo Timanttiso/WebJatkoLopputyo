@@ -6,17 +6,8 @@ import ShoppingCart from "./ShoppingCart";
 import Product from "./components/product"
 import productService from './services/products'
 import Checkout from './checkout';
-<<<<<<< HEAD
 import SingleProduct from './components/singleProduct';
-const Filter = ({ findProduct }) => {
-    return (
-        <div>
-            filter shown with <input onChange={findProduct} />
-        </div>
-    );
-};
-=======
->>>>>>> 221d32b2e93cfbf4675412b2a0fca3462d24177e
+
 
 const Products = ({ filteredProducts }) => {
     return (
@@ -80,7 +71,7 @@ function App() {
                     } />
                     <Route path="/products/:id" element={
                         <>
-                            <Header />
+                            <Header findProduct={findProduct} />
                             <SingleProduct/>
                         </>
 
