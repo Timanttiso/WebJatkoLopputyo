@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 const Filter = ({ findProduct }) => {
     return (
-        <div>
+        <div id="search-bar">
             filter shown with <input onChange={findProduct} />
         </div>
     );
