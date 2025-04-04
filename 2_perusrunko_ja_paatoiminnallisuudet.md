@@ -7,11 +7,11 @@ Sovellus-ympäristö toteutetaan paikalliselle virtuaalikoneelle.
 
 ## 2. Backend
 
-Backendissä käytetään nodea ja express kirjastoa. 
+Backendissä käytetään nodea ja express kirjastoa. Backendiin on tässä vaiheessa lisätty lisäys, poisto ja hakemis ominaisuudet kaikille tableille. Luodut tablet on products ja shoppingCart. Product tablessa on kaikki tuotteet, joita verkkokaupassa on myynnissä. ShoppingCartissa on kaikkia ostoskorissa olevat tuotteet. 
 
 ## 3. Frontend
 
-Frontend toteutetaan Reactilla. Frontendissä on oltava components kansio, joka sisältää sovelluksessa käytettävät komponentit.
+Frontend toteutetaan Reactilla. Frontendissä on oltava components kansio, joka sisältää sovelluksessa käytettävät komponentit. Frontendiin on tehty pääsivu, jossa on routeri, joka kuljettaa käyttäjää eri sivuille napeista, yms. Sivuja ohjelmassa on pääsivu, ostoskori, admin sivu, checkout sivu ja tuote sivu. Pääsivulta voi nähdä kaikki tuotteet, lisätä tuotteita ostoskoriin, hakea tuotteita, siirtyä ostoskorriin tai katsella tuotteen tietoja menemällä tuote sivulle klikkaamalla tuotetta. Ostoskorista voi katsella siellä olevia tuotteita ja tuotteita voi poistaa ostoskorista. Sivulla on headeri, josta voi aina palata takaisin etusivulle. admin sivulla on salasana ja sieltä voi lisätä tuotteita verkkokauppaan.
 
 ## 4. Tietokanta
 
