@@ -69,6 +69,8 @@ function App() {
 
 
                     } />
+<<<<<<< HEAD
+=======
                     <Route path="/products/:id" element={
                         <>
                             <Header findProduct={findProduct} />
@@ -76,6 +78,7 @@ function App() {
                         </>
 
                     }/>
+<<<<<<< HEAD
                     <Route path="/admin" element={
                         <>
                             <Header findProduct={findProduct} />
@@ -83,6 +86,9 @@ function App() {
                         </>
 
                     }/>
+=======
+>>>>>>> aafec9ad6b9b1317d1f86e338cb0efb7ded4be48
+>>>>>>> 6a630333e7b70e541f615a645c6947da6346da34
                 </Routes>
             </Router>
             <footer>
