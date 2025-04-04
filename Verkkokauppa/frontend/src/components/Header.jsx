@@ -1,11 +1,12 @@
 import React from 'react';
 import shoppingCartimage from "../icons/shoppingCart.png"
 import PropTypes from "prop-types";
-
+import searchIcon from "../icons/searchIcon.png"
 const Filter = ({ findProduct }) => {
     return (
         <div id="search-bar">
-            filter shown with <input onChange={findProduct} />
+            <input onChange={findProduct} placeholder='Etsi Tuote'/>
+            <span class="icon"><img src={searchIcon} alt="🔍" /></span>
         </div>
     );
 };

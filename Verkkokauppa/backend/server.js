@@ -37,7 +37,11 @@ db.run(`CREATE TABLE IF NOT EXISTS shoppingCart (
     description TEXT,
     imageLink TEXT
 )`);
-  
+
+
+
+
+
 //Toiminnot products tablelle
 app.post('/products', (req, res) => {
   const { productName, price, description, imageLink } = req.body;

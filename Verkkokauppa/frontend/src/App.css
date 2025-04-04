@@ -62,17 +62,6 @@ nav {
   padding-left: 20px;
 }
 
-#search-overlay {
-  position: absolute;
-  background-color: white;
-  border: 1px solid #ccc;
-  padding: 10px;
-  z-index: 100;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
-  width: 300px;
-  top: 100px;
-  left: 20px;
-}
 
 /* Ostoskorin painike */
 button {
@@ -201,4 +190,108 @@ footer p {
     flex-direction: column;
     gap: 10px;
   }
+}
+/* Search Bar Styling */
+#search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 5px;
+}
+
+#search-bar input {
+  width: 250px;
+  padding: 10px 40px 10px 10px; /* Adjust padding to make space for icon */
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  font-size: 16px;
+}
+
+#search-bar input:focus {
+  border-color: #ff7e5f;
+  box-shadow: 0 0 5px rgba(255, 126, 95, 0.5);
+}
+
+#search-bar input::placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+.icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.icon img {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  #search-bar input {
+    width: 180px;
+    font-size: 14px;
+  }
+}
+.shoppingCartList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.shoppingCartList img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.shoppingCartList button {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.shoppingCartList button:hover {
+  background: #cc0000;
+}
+
+.shoppingCartContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.checkout {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background: green;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.checkout:hover {
+  background: darkgreen;
 }
