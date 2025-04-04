@@ -9,6 +9,6 @@
 |  20.3.2025 | 5h | Etusivun ja ostoskorin alustus  | Backend luotu, frontend perusrunko, komponentteja tehty | Yhdessä |
 |  25.3.2025 | 4h | Etusivun ja ostoskorin parantaminen plus 2 vaiheen raportin päivitys | Etusivulle lisätty lisää ostoskoriin nappi ja sen toiminnot tehty, Poista nappi ostoskorin tuotteisiin ja sen toiminta tehty, Ostoskoriin ostonappi ja sen toiminnot. CSS paranneltu. | Yhdessä |
 |  4.4.2025 | 4h | Hakukentän ja tuotesivun tekeminen | Tuotesivu tehty, hakukenttä tehty, tuotteen lisäys sivu (admin sivu) tehty, parannettu css | Yhdessä |
-|  4.4.2025 | 5h | Tokeni pohjainen kirjautuminen tuotteen lisäys (admin) sivulle. | Kirjautuminen toimii | Rami |
+|  4.4.2025 | 5h | Tokeni pohjainen kirjautuminen tuotteen lisäys (admin) sivulle | Kirjautuminen toimii | Rami |
 
 Tunteja käytetty yhteensä: 21,5h
