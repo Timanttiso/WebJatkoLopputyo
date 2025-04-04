@@ -6,6 +6,8 @@ import ShoppingCart from "./ShoppingCart";
 import Product from "./components/product"
 import productService from './services/products'
 import Checkout from './checkout';
+import SingleProduct from './components/singleProduct';
+
 
 const Products = ({ filteredProducts }) => {
     return (
@@ -67,6 +69,16 @@ function App() {
 
 
                     } />
+<<<<<<< HEAD
+=======
+                    <Route path="/products/:id" element={
+                        <>
+                            <Header findProduct={findProduct} />
+                            <SingleProduct/>
+                        </>
+
+                    }/>
+>>>>>>> aafec9ad6b9b1317d1f86e338cb0efb7ded4be48
                 </Routes>
             </Router>
             <footer>
