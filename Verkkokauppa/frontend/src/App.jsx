@@ -49,6 +49,12 @@ function App() {
                         
 
                     } />
+                    <Route path="/product/:id" element={
+                        <>
+                            
+                        </>
+
+                    }/>
                 </Routes>
             </Router>
             <footer>

@@ -20,6 +20,9 @@ const Product = ({ product }) => {
             setError("Error adding item to shopping cart: " + (err.response?.data?.error || err.message));
         }
     }
+    const openProduct = () => {
+        window.location.href = "/product/" + product.id
+    }
     const productStyle = {
         paddingTop: 10,
         paddingLeft: 2,
@@ -37,7 +40,7 @@ const Product = ({ product }) => {
         <div style={productStyle}>
             {error}
             <div className='product'>
-                {product.productName} 
+                <h3 onClick={openProduct}>{product.productName}</h3>
                 <div id='productInfo'>
                     <img style={imageStyle} src={imagePath} alt={product.productName} />
                     <br />
