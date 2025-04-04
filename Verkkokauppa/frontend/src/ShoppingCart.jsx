@@ -1,7 +1,6 @@
 import './App.css';
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Header from "./components/Header";
 
 export default function ShoppingCart() {
     const [shoppingCart, setShoppingCart] = useState([]);
@@ -41,10 +40,6 @@ export default function ShoppingCart() {
         fetchShoppingCart();
     }, []);
 
-    const imageStyle = {
-        width: 50,
-        height: 50
-    }
     return (
         <div className="shoppingCartContainer">
             <h1>Ostoskori</h1>

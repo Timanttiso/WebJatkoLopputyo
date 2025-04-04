@@ -6,7 +6,7 @@ import ShoppingCart from "./ShoppingCart";
 import Product from "./components/product"
 import productService from './services/products'
 import Checkout from './checkout';
-import SingleProduct from './components/singleProduct';
+import SingleProduct from './components/SingleProduct';
 import AdminPage from './components/AdminPage';
 
 const Products = ({ filteredProducts }) => {

@@ -57,7 +57,7 @@ const Product = ({ product }) => {
 }
 
 Product.propTypes = {
-    Product: PropTypes.object.isRequired,
+    product: PropTypes.object.isRequired,
     productToDelete: PropTypes.func.isRequired
 }
 
