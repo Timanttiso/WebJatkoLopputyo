@@ -40,7 +40,7 @@ const Product = ({ product }) => {
         <div style={productStyle}>
             {error}
             <div className='product'>
-                <h3 onClick={openProduct}>{product.productName}</h3>
+                <h3 onClick={openProduct} id="productOpenButton">{product.productName}</h3>
                 <div id='productInfo'>
                     <img style={imageStyle} src={imagePath} alt={product.productName} />
                     <br />
