@@ -6,7 +6,7 @@ import ShoppingCart from "./ShoppingCart";
 import Product from "./components/product"
 import productService from './services/products'
 import Checkout from './checkout';
-
+import SingleProduct from './components/singleProduct';
 const Filter = ({ findProduct }) => {
     return (
         <div>
@@ -76,9 +76,10 @@ function App() {
 
 
                     } />
-                    <Route path="/product/:id" element={
+                    <Route path="/products/:id" element={
                         <>
-                            
+                            <Header />
+                            <SingleProduct/>
                         </>
 
                     }/>

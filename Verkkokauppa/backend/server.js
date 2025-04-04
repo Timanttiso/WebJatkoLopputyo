@@ -55,12 +55,29 @@ app.post('/products', (req, res) => {
 });
 
 app.get('/products', (req, res) => {
-    db.all('SELECT * FROM products', [], (err, rows) => {
+    db.all('SELECT * FROM products', [], (err, row) => {
       if (err) {
         return res.status(500).json({ error: err.message });
       }
-      res.json(rows);
+      res.json(row);
     });
+});
+
+app.get('/products/:id', (req,res) => {
+  const {id} = req.params;
+  if(!id){
+    return res.status(400).json({error:'Kyseistä tuotetta ei ole'});
+  }
+  const query = 'SELECT * FROM products WHERE id = ?';
+  db.get(query, [id], (err,row) =>{
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    if (this.changes === 0) {
+      return res.status(404).json({ error: 'Tuotetta ei löytynyt' });
+    }
+    res.json(row);
+  });
 });
 
 app.put('/products/:id', (req, res) => {
