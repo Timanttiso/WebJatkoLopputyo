@@ -2,7 +2,7 @@ const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 const cors = require('cors');
-const loginRouter = require('./controllers/login')
+require('dotenv').config()
 
 const app = express();
 const port = 3000;
@@ -11,8 +11,6 @@ app.use(cors());
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, '')));
-app.use('/users', loginRouter)
-
 
 const db = new sqlite3.Database('./database.db', (err) => {
   if (err) {
@@ -21,6 +19,14 @@ const db = new sqlite3.Database('./database.db', (err) => {
     console.log('Yhteys SQLite-tietokantaan onnistui.');
   }
 });
+
+const loginRouter = require('./controllers/login')(db)
+const usersRouter = require('./controllers/users')(db)
+const middleware = require('./utils/middleware')(db)
+
+app.use('/api/login', loginRouter)
+app.use('/api/users', usersRouter)
+app.use(middleware.tokenExtractor)
 
 //Alustaa products tablen
 db.run(`CREATE TABLE IF NOT EXISTS products (
@@ -47,11 +53,11 @@ db.run(`CREATE TABLE IF NOT EXISTS users (
   password TEXT
 )`);
 
-//Hakee käyttäjän
+// Toiminnot käyttäjille
 app.get('/users/:id', (req, res) => {
   const { id } = req.params;
   if (!id) {
-    return res.status(400).json({ error: 'Kyseistä käyttäjää ei ole' });
+    return res.status(400).json({ error: 'Käyttäjää ei löytynyt' });
   }
   const query = 'SELECT * FROM users WHERE id = ?';
   db.get(query, [id], (err, row) => {
@@ -65,7 +71,21 @@ app.get('/users/:id', (req, res) => {
   });
 });
 
+/*
+app.post('/users', (req, res) => {
+  const { username, password } = req.body;
+  if (!productName || !price || !description || !imageLink) {
+    return res.status(400).json({ error: 'Tarvitaan nimi, hinta, kuvaus ja linkki kuvaan' });
+  }
 
+  const query = `INSERT INTO products (productName, price, description, imageLink) VALUES (?, ?, ?, ?)`;
+  db.run(query, [productName, price, description, imageLink], function (err) {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    res.status(201).json({ id: this.lastID, productName, price, description, imageLink });
+  });
+});*/
 
 
 //Toiminnot products tablelle

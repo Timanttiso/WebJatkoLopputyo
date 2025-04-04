@@ -4,6 +4,7 @@ import './App.css';
 import Header from "./components/Header";
 import ShoppingCart from "./ShoppingCart";
 import Product from "./components/product"
+import loginService from './services/login'
 import productService from './services/products'
 import Checkout from './checkout';
 import SingleProduct from './components/SingleProduct';
@@ -22,6 +23,8 @@ const Products = ({ filteredProducts }) => {
 function App() {
     const [products, setProducts] = useState([])
     const [filteredProducts, setFilteredProducts] = useState([])
+    const [user, setUser] = useState(null);
+    const [message, setMessage] = useState('');
 
     useEffect(() => {
         productService.getAll().then(response => {
@@ -32,7 +35,37 @@ function App() {
                 console.error("Expected an array but got:", response)
             }
         }).catch(error => console.error("Error fetching products:", error))
+
+        const loggedUserJSON = window.localStorage.getItem('loggedUser')
+        if (loggedUserJSON) {
+            const user = JSON.parse(loggedUserJSON)
+            setUser(user)
+            productService.setToken(user.token)
+        }
     }, [])
+
+    const handleLogin = async (username, password) => {
+        try {
+            const loggedInUser = await loginService.login({ username, password })
+
+            window.localStorage.setItem('loggedUser', JSON.stringify(loggedInUser))
+            productService.setToken(loggedInUser.token)
+            setUser(loggedInUser)
+            return true
+        } catch (err) {
+            console.error('Virhe kirjautumisessa:', err)
+            return false
+        }
+    }
+
+    const handleLogout = () => {
+        window.localStorage.removeItem('loggedUser')
+        setMessage(`Hyvästi ${user.username} 😔`)
+        setTimeout(() => {
+            setMessage('')
+        }, 3000)
+        setUser(null)
+    }
 
     const findProduct = (event) => {
         const updateProduct = products.filter(
@@ -46,18 +79,19 @@ function App() {
     return (
         <>
             <Router>
-
                 <Routes>
                     <Route path="/" element={
                         <>
-                            <Header findProduct={findProduct} />
+                            <Header findProduct={findProduct} user={user} handleLogout={handleLogout} />
+                            {message && <p style={{ color: "green" }}>{message}</p>}
                             <h2>Tuotteet</h2>
                             <Products filteredProducts={filteredProducts} />
                         </>
                     } />
                     <Route path="/shoppingcart" element={
                         <>
-                            <Header findProduct={findProduct} />
+                            <Header findProduct={findProduct} user={user} handleLogout={handleLogout} />
+                            {message && <p style={{ color: "green" }}>{message}</p>}
                             <ShoppingCart />
                         </>
 
@@ -72,18 +106,20 @@ function App() {
                     } />
                     <Route path="/products/:id" element={
                         <>
-                            <Header findProduct={findProduct} />
-                            <SingleProduct/>
+                            <Header findProduct={findProduct} user={user} handleLogout={handleLogout} />
+                            {message && <p style={{ color: "green" }}>{message}</p>}
+                            <SingleProduct />
                         </>
 
-                    }/>
+                    } />
                     <Route path="/admin" element={
                         <>
-                            <Header findProduct={findProduct} />
-                            <AdminPage/>
+                            <Header findProduct={findProduct} user={user} handleLogout={handleLogout} />
+                            {message && <p style={{ color: "green" }}>{message}</p>}
+                            <AdminPage user={user} handleLogin={handleLogin} />
                         </>
 
-                    }/>
+                    } />
                 </Routes>
             </Router>
             <footer>

@@ -11,7 +11,7 @@ const Filter = ({ findProduct }) => {
     );
 };
 
-const Header = ({ findProduct }) => {
+const Header = ({ findProduct, user, handleLogout }) => {
     const openShoppingCart = () => {
         window.location.href = "/shoppingcart"
     }
@@ -23,9 +23,12 @@ const Header = ({ findProduct }) => {
             <nav>
                 <ul id="navigation">
                     <li id="verkkokauppa"><h1 onClick={goBack}>Verkkokauppa</h1></li>
-                    <li id="haku"><Filter findProduct={findProduct} />
-
-                    </li>
+                    <li id="haku"><Filter findProduct={findProduct} /></li>
+                    {user && (
+                        <li>
+                            <button onClick={handleLogout}>Kirjaudu ulos</button>
+                        </li>
+                    )}
                     <li>
                         <button onClick={openShoppingCart}>
                             <img src={shoppingCartimage} className="shoppingCart" />
@@ -38,7 +41,9 @@ const Header = ({ findProduct }) => {
 }
 
 Header.propTypes = {
-    id: PropTypes.object.isRequired
+    findProduct: PropTypes.func.isRequired,
+    user: PropTypes.object,
+    handleLogout: PropTypes.func
 }
 
 export default Header
