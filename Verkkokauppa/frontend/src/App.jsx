@@ -57,6 +57,7 @@ function App() {
                     } />
                     <Route path="/shoppingcart" element={
                         <>
+                            <Header findProduct={findProduct} />
                             <ShoppingCart />
                         </>
 

@@ -65,6 +65,9 @@ app.get('/users/:id', (req, res) => {
   });
 });
 
+
+
+
 //Toiminnot products tablelle
 app.post('/products', (req, res) => {
   const { productName, price, description, imageLink } = req.body;

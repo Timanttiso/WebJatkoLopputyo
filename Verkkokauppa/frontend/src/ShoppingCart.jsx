@@ -46,17 +46,23 @@ export default function ShoppingCart() {
         height: 50
     }
     return (
-        <div>
-            <Header id={"ostoskori"}/>
+        <div className="shoppingCartContainer">
             <h1>Ostoskori</h1>
-            {error && <p>{error}</p>}
-                <ul>
-                    {shoppingCart.map((product) => (
-                        <li key={product.id} className="shoppingCartList"><img style={imageStyle} src={`/productImages/${product.imageLink.split('/').pop()}`}></img>Nimi: {product.productName} Hinta: {product.price} €  <button onClick={() =>deleteFromShoppingCart(product.id, product.productName)}>Poista korista</button></li>
-                    ))} 
-                </ul>
-                {notificationMessage && <p style={{color:"red"}}>{notificationMessage}</p>}
+            {error && <p style={{ color: "red" }}>{error}</p>}
+            
+            <ul>
+                {shoppingCart.map((product) => (
+                    <li key={product.id} className="shoppingCartList">
+                        <img src={`/productImages/${product.imageLink.split('/').pop()}`} alt={product.productName} />
+                        <span><strong>{product.productName}</strong> - {product.price} €</span>
+                        <button onClick={() => deleteFromShoppingCart(product.id, product.productName)}>Poista</button>
+                    </li>
+                ))}
+            </ul>
+            
+            {notificationMessage && <p style={{ color: "red" }}>{notificationMessage}</p>}
+            
             <button className="checkout" onClick={buyStuff}>Maksa tuotteet</button>
         </div>
-    )
+    );
 }

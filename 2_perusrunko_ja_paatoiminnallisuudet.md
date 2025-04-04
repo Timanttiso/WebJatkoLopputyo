@@ -11,7 +11,7 @@ Backendissä käytetään nodea ja express kirjastoa. Backendiin on tässä vaih
 
 ## 3. Frontend
 
-Frontend toteutetaan Reactilla. Frontendissä on oltava components kansio, joka sisältää sovelluksessa käytettävät komponentit. Frontendiin on tehty pääsivu, jossa on routeri, joka kuljettaa käyttäjää eri sivuille napeista, yms. Sivuja ohjelmassa on pääsivu, ostoskori, admin sivu, checkout sivu ja tuote sivu. Pääsivulta voi nähdä kaikki tuotteet, lisätä tuotteita ostoskoriin, hakea tuotteita, siirtyä ostoskorriin tai katsella tuotteen tietoja menemällä tuote sivulle klikkaamalla tuotetta. Ostoskorista voi katsella siellä olevia tuotteita ja tuotteita voi poistaa ostoskorista. Sivulla on headeri, josta voi aina palata takaisin etusivulle. admin sivulla on salasana ja sieltä voi lisätä tuotteita verkkokauppaan.
+Frontend toteutetaan Reactilla. Frontendissä on oltava components kansio, joka sisältää sovelluksessa käytettävät komponentit. Frontendiin on tehty pääsivu, jossa on routeri, joka kuljettaa käyttäjää eri sivuille napeista, yms. Sivuja ohjelmassa on pääsivu, ostoskori, admin sivu, checkout sivu ja tuote sivu. Pääsivulta voi nähdä kaikki tuotteet, lisätä tuotteita ostoskoriin, hakea tuotteita, siirtyä ostoskorriin tai katsella tuotteen tietoja menemällä tuote sivulle klikkaamalla tuotetta. Ostoskorista voi katsella siellä olevia tuotteita, tuotteet voi maksaa ja tuotteita voi poistaa ostoskorista. . Sivulla on headeri, josta voi aina palata takaisin etusivulle. admin sivulla on salasana ja sieltä voi lisätä tuotteita verkkokauppaan. Checkout sivu sisältää kiitoksen ostamisesta ja palauttaa käyttäjän takaisin etusivulle lyhyen ajan jälkeen. Tuote sivulta voi lisätä tuotteen ostoskoriin ja katsella sen tietoja.
 
 ## 4. Tietokanta
 
@@ -19,11 +19,11 @@ Tietokanta on SQLite pohjainen. Tietokannassa on kaksi taulukkoa. Yksi tuotteill
 
 ## 5. Perusrunko ja arkkitehtuuri
 
-Frontendissä on components kansio, josta sovellusten osat tuodaan app.jsx tiedostoon.
+Frontendissä on components kansio, josta sovellusten osat tuodaan app.jsx tiedostoon. Componenteista löytyy komponentteja, kuten: AdminPage, Header, product, Section ja singleProudct. 
 
 ## 6. Toiminnallisuudet
 
-Sovelluksessa toimintoja on esim. Tuotteiden listaus etusivulle, tuotteiden omien sivujen avaaminen, tuotteen lisääminen ostoskoriin ja tuotteen poistaminen ostoskorista. 
+Sovelluksessa toimintoja on esim. Tuotteiden listaus etusivulle, tuotteiden omien sivujen avaaminen, tuotteen lisääminen ostoskoriin, tuotteen poistaminen ostoskorista, tuotteen lisäys verkkokauppaan ja admin sivulle kirjautuminen. 
 
 ## 7. Koodin laatu ja dokumentointi
 
