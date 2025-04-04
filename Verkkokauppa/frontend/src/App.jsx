@@ -6,18 +6,48 @@ import ShoppingCart from "./ShoppingCart";
 import Product from "./components/product"
 import productService from './services/products'
 import Checkout from './checkout';
+
+const Filter = ({ findProduct }) => {
+    return (
+        <div>
+            filter shown with <input onChange={findProduct} />
+        </div>
+    );
+};
+
+const Products = ({ filteredProducts }) => {
+    return (
+        <div id='products'>
+            {filteredProducts.map((product) => (
+                <Product key={product.id} product={product} />
+            ))}
+        </div>
+    );
+};
+
 function App() {
     const [products, setProducts] = useState([])
+    const [filteredProducts, setFilteredProducts] = useState([])
 
     useEffect(() => {
         productService.getAll().then(response => {
             if (Array.isArray(response)) {
                 setProducts(response.sort((a, b) => b.price - a.price))
+                setFilteredProducts(response.sort((a, b) => b.price - a.price));
             } else {
                 console.error("Expected an array but got:", response)
             }
         }).catch(error => console.error("Error fetching products:", error))
     }, [])
+
+    const findProduct = (event) => {
+        const updateProduct = products.filter(
+            (product) =>
+                product.productName.toLowerCase().includes(event.target.value.toLowerCase()) ||
+                product.description.toLowerCase().includes(event.target.value.toLowerCase())
+        );
+        setFilteredProducts(updateProduct);
+    };
 
     return (
         <>
@@ -27,26 +57,23 @@ function App() {
                     <Route path="/" element={
                         <>
                             <Header />
+                            <Filter findProduct={findProduct} />
                             <h2>products</h2>
-                            <div id='products'>
-                                {products.map(product =>
-                                    <Product key={product.id} product={product} />
-                                )}
-                            </div>
+                            <Products filteredProducts={filteredProducts} />
                         </>
                     } />
                     <Route path="/shoppingcart" element={
                         <>
                             <ShoppingCart />
                         </>
-                        
+
 
                     } />
                     <Route path="/checkout" element={
                         <>
-                            <Checkout/>
+                            <Checkout />
                         </>
-                        
+
 
                     } />
                     <Route path="/product/:id" element={
@@ -60,8 +87,8 @@ function App() {
             <footer>
                 <h2>Tietoa Meistä</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur nisi id lorem elementum, consequat ornare lorem ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                     Praesent vel pellentesque sem. Donec bibendum convallis leo. Sed eget mi pellentesque, maximus ipsum sit amet, placerat velit. Sed ut ipsum suscipit,
-                     ultricies enim bibendum, vehicula nisi. Vivamus erat quam, vestibulum ac massa vitae, eleifend bibendum nisi. Pellentesque malesuada erat commodo vehicula commodo.</p>
+                    Praesent vel pellentesque sem. Donec bibendum convallis leo. Sed eget mi pellentesque, maximus ipsum sit amet, placerat velit. Sed ut ipsum suscipit,
+                    ultricies enim bibendum, vehicula nisi. Vivamus erat quam, vestibulum ac massa vitae, eleifend bibendum nisi. Pellentesque malesuada erat commodo vehicula commodo.</p>
                 <p>©1999 - 2025 Verkkokauppa</p>
             </footer>
         </>
