@@ -7,7 +7,7 @@ import Product from "./components/product"
 import productService from './services/products'
 import Checkout from './checkout';
 import SingleProduct from './components/singleProduct';
-
+import AdminPage from './components/AdminPage';
 
 const Products = ({ filteredProducts }) => {
     return (
@@ -73,6 +73,13 @@ function App() {
                         <>
                             <Header findProduct={findProduct} />
                             <SingleProduct/>
+                        </>
+
+                    }/>
+                    <Route path="/admin" element={
+                        <>
+                            <Header findProduct={findProduct} />
+                            <AdminPage/>
                         </>
 
                     }/>
