@@ -6,6 +6,7 @@ import ShoppingCart from "./ShoppingCart";
 import Product from "./components/product"
 import productService from './services/products'
 import Checkout from './checkout';
+<<<<<<< HEAD
 import SingleProduct from './components/singleProduct';
 const Filter = ({ findProduct }) => {
     return (
@@ -14,6 +15,8 @@ const Filter = ({ findProduct }) => {
         </div>
     );
 };
+=======
+>>>>>>> 221d32b2e93cfbf4675412b2a0fca3462d24177e
 
 const Products = ({ filteredProducts }) => {
     return (
@@ -56,9 +59,8 @@ function App() {
                 <Routes>
                     <Route path="/" element={
                         <>
-                            <Header />
-                            <Filter findProduct={findProduct} />
-                            <h2>products</h2>
+                            <Header findProduct={findProduct} />
+                            <h2>Tuotteet</h2>
                             <Products filteredProducts={filteredProducts} />
                         </>
                     } />
