@@ -7,14 +7,6 @@ import Product from "./components/product"
 import productService from './services/products'
 import Checkout from './checkout';
 
-const Filter = ({ findProduct }) => {
-    return (
-        <div>
-            filter shown with <input onChange={findProduct} />
-        </div>
-    );
-};
-
 const Products = ({ filteredProducts }) => {
     return (
         <div id='products'>
@@ -56,9 +48,8 @@ function App() {
                 <Routes>
                     <Route path="/" element={
                         <>
-                            <Header />
-                            <Filter findProduct={findProduct} />
-                            <h2>products</h2>
+                            <Header findProduct={findProduct} />
+                            <h2>Tuotteet</h2>
                             <Products filteredProducts={filteredProducts} />
                         </>
                     } />
