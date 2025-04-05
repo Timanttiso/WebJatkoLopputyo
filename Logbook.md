@@ -10,5 +10,6 @@
 |  25.3.2025 | 4h | Etusivun ja ostoskorin parantaminen plus 2 vaiheen raportin päivitys | Etusivulle lisätty lisää ostoskoriin nappi ja sen toiminnot tehty, Poista nappi ostoskorin tuotteisiin ja sen toiminta tehty, Ostoskoriin ostonappi ja sen toiminnot. CSS paranneltu. | Yhdessä |
 |  4.4.2025 | 4h | Hakukentän ja tuotesivun tekeminen | Tuotesivu tehty, hakukenttä tehty, tuotteen lisäys sivu (admin sivu) tehty, parannettu css | Yhdessä |
 |  4.4.2025 | 5h | Tokeni pohjainen kirjautuminen tuotteen lisäys (admin) sivulle | Kirjautuminen toimii ja admin sivulle ei nyt pääse ellei olla tietyllä käyttäjällä kirjautunut | Rami |
+|  6.4.2025 | 1h | CSS ja tyyli | Parannuksia CSS:lle ja ulkonäölle usealle sivulle | Niko |
 
-Tunteja käytetty yhteensä: 21,5h
+Tunteja käytetty yhteensä: 22,5h
