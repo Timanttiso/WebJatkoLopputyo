@@ -54,45 +54,46 @@ const AdminPage = ({ user, handleLogin }) =>{
 
     if (user === null) {
         return (
-            <>
+            <div className='admin-container'>
                 <h1>Kirjaudu sisään</h1>
-                {message && <p style={{ color: "green" }}>{message}</p>}
-                {error && <p style={{ color: "red" }}>{error}</p>}
-                <form id='kirjautumislomake' onSubmit={handleSubmit}>
+                {message && <p className='admin-message success'>{message}</p>}
+                {error && <p className='admin-message error'>{error}</p>}
+                <form className='admin-form' onSubmit={handleSubmit}>
                     <div>
-                        Käyttäjätunnus
                         <input
                             type='text'
                             value={username} name='Username'
+                            placeholder='Käyttäjätunnus'
                             onChange={({ target }) => setUsername(target.value)}
                         />
                     </div>
                     <div>
-                        Salasana
                         <input
                             type='password'
                             value={password}
+                            placeholder='Salasana'
                             onChange={({ target }) => setPassword(target.value)}
                         />
                     </div>
                     <button type='submit'>Kirjaudu sisään</button>
                 </form>
-            </>
+            </div>
         )
     }
 
     return(
-        <>
-            <form onSubmit={addProduct}>
+        <div className='admin-container'>
+            <h1>Lisää uusi tuote myyntiin</h1>
+            <form className='admin-form' onSubmit={addProduct}>
                 <input type="text" placeholder='Tuotteen nimi' id="productName" onChange={(e) => setProductName(e.target.value)}></input>
                 <input type="number" placeholder='Tuotteen hinta' id='price' onChange={(e) => setPrice(e.target.value)}></input>
                 <textarea placeholder='Tuotteen kuvaus' id="description" onChange={(e) => setDescription(e.target.value)}></textarea>
                 <input type="text" placeholder='Kuvan linkki' id="imageLink" onChange={(e) => setImageLink(e.target.value)}></input>
                 <input type="submit" value="Lisää tuote"></input>
             </form>
-            {message && <p style={{ color: "green" }}>{message}</p>}
-            {error && <p style={{ color: "red" }}>{error}</p>}
-        </>
+            {message && <p className='admin-message success'>{message}</p>}
+            {error && <p className='admin-message error'>{error}</p>}
+        </div>
     )
 }
 

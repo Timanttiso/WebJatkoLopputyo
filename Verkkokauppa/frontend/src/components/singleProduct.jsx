@@ -34,21 +34,21 @@ const SingleProduct = () => {
     }, [id])
 
     if(error) return <p>{error}</p>
-    const imageStyle = {
-        width: 350,
-        height: 350
-    }
     let imagePath = `/productImages/${product.imageLink}`
-    return(
-        <div>
+    return (
+        <div className="single-product-container">
+          <div className="product-image">
+            <img src={imagePath} alt={product.productName} />
+          </div>
+          <div className="product-details">
             <h2>{product.productName}</h2>
-            <img style={imageStyle} src={imagePath} alt={product.productName} /><h3>{product.price} €</h3>
+            <h3>{product.price} €</h3>
             <p>{product.description}</p>
-            {<div><button onClick={addToShoppingCart}>Lisää Ostoskoriin</button></div>}
-            {message && <p style={{color:"green"}}>{message}</p>}
+            <button onClick={addToShoppingCart}>Lisää Ostoskoriin</button>
+            {message && <p className="success-message">{message}</p>}
+          </div>
         </div>
-
-    );
+      );
 
     
 }

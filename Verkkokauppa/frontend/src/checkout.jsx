@@ -12,7 +12,12 @@ function Checkout() {
         return () => clearTimeout(timer);
     }, [navigate]);
 
-    return <h1>Kiitos ostoksista!</h1>;
+    return (
+        <div className="checkout-container">
+            <h1 className="checkout-message">Kiitos ostoksista!</h1>
+            <p className="checkout-subtext">Sinut ohjataan takaisin etusivulle hetken kuluttua...</p>
+        </div>
+    );
 }
 
 export default Checkout;
