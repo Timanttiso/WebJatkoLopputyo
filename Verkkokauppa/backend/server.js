@@ -71,23 +71,6 @@ app.get('/users/:id', (req, res) => {
   });
 });
 
-/*
-app.post('/users', (req, res) => {
-  const { username, password } = req.body;
-  if (!productName || !price || !description || !imageLink) {
-    return res.status(400).json({ error: 'Tarvitaan nimi, hinta, kuvaus ja linkki kuvaan' });
-  }
-
-  const query = `INSERT INTO products (productName, price, description, imageLink) VALUES (?, ?, ?, ?)`;
-  db.run(query, [productName, price, description, imageLink], function (err) {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.status(201).json({ id: this.lastID, productName, price, description, imageLink });
-  });
-});*/
-
-
 //Toiminnot products tablelle
 app.post('/products', (req, res) => {
   const { productName, price, description, imageLink } = req.body;
