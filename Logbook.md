@@ -11,6 +11,6 @@
 |  4.4.2025 | 4h | Hakukentän ja tuotesivun tekeminen | Tuotesivu tehty, hakukenttä tehty, tuotteen lisäys sivu (admin sivu) tehty, parannettu css | Yhdessä |
 |  4.4.2025 | 5h | Kirjautuminen tuotteen lisäys (admin) sivulle | Kirjautuminen toimii ja admin sivulle ei nyt pääse ellei ole kirjautunut | Rami |
 |  5.4.2025 | 1h | CSS ja tyyli | Parannuksia CSS:lle ja ulkonäölle usealle sivulle | Niko |
-|  7.4.2025 | -h | - | - | Rami |
+|  7.4.2025 | 2h | Tokeni pohjainen kirjautuminen | Vain admin käyttäjä voi nyt lisätä tuotteita | Rami |
 
-Tunteja käytetty yhteensä: 22,5h
+Tunteja käytetty yhteensä: 24,5h
