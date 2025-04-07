@@ -1,7 +1,7 @@
-import axios from 'axios';
 import { useState } from 'react';
+import productService from '../services/products'
 
-const AdminPage = ({ user, handleLogin }) =>{
+const AdminPage = ({ user, handleLogin }) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
@@ -15,12 +15,13 @@ const AdminPage = ({ user, handleLogin }) =>{
     const addProduct = async (event) => {
         event.preventDefault();
         try {
-            await axios.post('http://localhost:3000/products',{
+            await productService.create({
                 productName,
                 price,
                 description,
                 imageLink
-            });
+            })
+
             setMessage(`${productName} lisätty!`);
             setTimeout(() => {
                 setMessage('');
@@ -29,18 +30,19 @@ const AdminPage = ({ user, handleLogin }) =>{
             setPrice('');
             setDescription('');
             setImageLink('');
-            
         } catch (err) {
-            setError('Error adding item to lineup: ' + (err.response?.data?.error || err.message));
+            setError('Tuotetta ei voinut lisätä: ' + (err.response?.data?.error || err.message));
+            setTimeout(() => {
+                setError('');
+            }, 10000);
         }
-        
     }
 
     const handleSubmit = async (event) => {
         event.preventDefault()
         setError('')
         const success = await handleLogin(username, password)
-        
+
         if (success) {
             setUsername('')
             setPassword('')
@@ -81,7 +83,7 @@ const AdminPage = ({ user, handleLogin }) =>{
         )
     }
 
-    return(
+    return (
         <div className='admin-container'>
             <h1>Lisää uusi tuote myyntiin</h1>
             <form className='admin-form' onSubmit={addProduct}>

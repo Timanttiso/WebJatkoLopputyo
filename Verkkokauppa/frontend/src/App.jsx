@@ -27,6 +27,13 @@ function App() {
     const [message, setMessage] = useState('');
 
     useEffect(() => {
+        const loggedUserJSON = window.localStorage.getItem('loggedUser')
+        if (loggedUserJSON) {
+            const user = JSON.parse(loggedUserJSON)
+            setUser(user)
+            productService.setToken(user.token)
+        }
+
         productService.getAll().then(response => {
             if (Array.isArray(response)) {
                 setProducts(response.sort((a, b) => b.price - a.price))
@@ -35,13 +42,6 @@ function App() {
                 console.error("Expected an array but got:", response)
             }
         }).catch(error => console.error("Error fetching products:", error))
-
-        const loggedUserJSON = window.localStorage.getItem('loggedUser')
-        if (loggedUserJSON) {
-            const user = JSON.parse(loggedUserJSON)
-            setUser(user)
-            productService.setToken(user.token)
-        }
     }, [])
 
     const handleLogin = async (username, password) => {

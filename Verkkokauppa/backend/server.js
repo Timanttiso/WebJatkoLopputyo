@@ -24,9 +24,9 @@ const loginRouter = require('./controllers/login')(db)
 const usersRouter = require('./controllers/users')(db)
 const middleware = require('./utils/middleware')(db)
 
+app.use(middleware.tokenExtractor)
 app.use('/api/login', loginRouter)
 app.use('/api/users', usersRouter)
-app.use(middleware.tokenExtractor)
 
 //Alustaa products tablen
 db.run(`CREATE TABLE IF NOT EXISTS products (
@@ -71,8 +71,13 @@ app.get('/users/:id', (req, res) => {
   });
 });
 
-//Toiminnot products tablelle
-app.post('/products', (req, res) => {
+// Toiminnot products tablelle
+// Nyt vain admin voi lisätä tuotteita
+app.post('/products',
+  middleware.userExtractor,
+  middleware.adminOnly,
+  (req, res) => {
+  
   const { productName, price, description, imageLink } = req.body;
   if (!productName || !price || !description || !imageLink) {
     return res.status(400).json({ error: 'Tarvitaan nimi, hinta, kuvaus ja linkki kuvaan' });

@@ -1,9 +1,10 @@
 POST http://localhost:3000/products
 content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6MSwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzQ0MDEzMDMxfQ.KPcVNiDbWTzWoCittKKt090NkEEvpfVjjJws5ykAGtQ
 
 {
-    "productName": "Baked computer",
-    "price": 999,
-    "description": "BAKED BEANS",
-    "imageLink": "BakedBeans.jpg"
+    "productName": "Slick Shoes",
+    "price": 59.99,
+    "description": "Very slick shoes.",
+    "imageLink": "SlickShoes.png"
 }

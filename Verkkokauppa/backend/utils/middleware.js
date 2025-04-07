@@ -27,6 +27,8 @@ const middleware = (db) => {
                 if (err) return response.status(500).json({ error: err.message })
                 if (!user) return response.status(404).json({ error: 'Käyttäjää ei löytynyt' })
 
+                user.isAdmin = user.username === 'root'
+
                 request.user = user
                 next()
             })
@@ -35,9 +37,17 @@ const middleware = (db) => {
         }
     }
 
+    const adminOnly = (request, response, next) => {
+        if (!request.user || !request.user.isAdmin) {
+            return response.status(403).json({ error: 'Vain järjestelmänvalvoja voi lisätä tuotteita' })
+        }
+        next()
+    }
+
     return {
         tokenExtractor,
-        userExtractor
+        userExtractor,
+        adminOnly
     }
 }
 

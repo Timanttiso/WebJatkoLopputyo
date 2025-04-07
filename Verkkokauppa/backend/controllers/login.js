@@ -25,6 +25,7 @@ module.exports = (db) => {
             const userForToken = {
                 username: user.username,
                 id: user.id,
+                isAdmin: user.username === 'root'
             }
 
             const token = jwt.sign(userForToken, process.env.SECRET)
