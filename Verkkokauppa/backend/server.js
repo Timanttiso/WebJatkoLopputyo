@@ -203,6 +203,16 @@ app.delete('/shoppingCart', (req, res) => {
   });
 });
 
+app.get('/shoppingCart/Count', (req, res) => {
+  db.get('SELECT COUNT(id) as count FROM shoppingCart', [], (err, row) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    res.json({ count: row.count });
+  });
+});
+
+
 app.listen(port, () => {
   console.log(`Palvelin käynnissä osoitteessa http://localhost:${port}`);
 });

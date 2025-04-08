@@ -7,7 +7,7 @@ function Checkout() {
     useEffect(() => {
         const timer = setTimeout(() => {
             navigate("/");
-        }, 3000);
+        }, 3500);
 
         return () => clearTimeout(timer);
     }, [navigate]);
