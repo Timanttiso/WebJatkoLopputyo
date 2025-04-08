@@ -80,6 +80,7 @@ function App() {
         <>
             <Router>
                 <Routes>
+                    {/*Pääsivu*/}
                     <Route path="/" element={
                         <>
                             <Header findProduct={findProduct} user={user} handleLogout={handleLogout} />
@@ -88,6 +89,7 @@ function App() {
                             <Products filteredProducts={filteredProducts} />
                         </>
                     } />
+                    {/*Ostoskori*/}
                     <Route path="/shoppingcart" element={
                         <>
                             <Header findProduct={findProduct} user={user} handleLogout={handleLogout} />
@@ -97,6 +99,7 @@ function App() {
 
 
                     } />
+                    {/*Checkout*/}
                     <Route path="/checkout" element={
                         <>
                             <Checkout />
@@ -104,6 +107,7 @@ function App() {
 
 
                     } />
+                    {/*Tuotesivu*/}
                     <Route path="/products/:id" element={
                         <>
                             <Header findProduct={findProduct} user={user} handleLogout={handleLogout} />
@@ -112,6 +116,7 @@ function App() {
                         </>
 
                     } />
+                    {/*Admin sivu*/}
                     <Route path="/admin" element={
                         <>
                             <Header findProduct={findProduct} user={user} handleLogout={handleLogout} />
