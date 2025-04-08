@@ -69,6 +69,7 @@ button {
   border: none;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+  position: relative;
 }
 
 button:hover {
@@ -467,4 +468,24 @@ footer p {
 
 .admin-message.error {
   color: red;
+}
+#shoppingCartAmount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  z-index: 10;
 }
