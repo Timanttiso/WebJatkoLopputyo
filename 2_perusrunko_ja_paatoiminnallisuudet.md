@@ -3,7 +3,7 @@ Tässä versiossa ohjelmaan tullaan tekemään ohjelman perustoiminnot ja runko.
 
 ## 1. Ympäristö
 
-Sovellus-ympäristö toteutetaan paikalliselle virtuaalikoneelle.
+Sovellus-ympäristönä toimii  paikallinen virtuaalikone.
 
 ## 2. Backend
 
