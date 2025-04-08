@@ -6,6 +6,12 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 export default [
   { ignores: ['dist'] },
   {
+    "extends": ["plugin:vitest-globals/recommended"],
+    "env": {
+      "vitest-globals/env": true
+    }
+  },
+  {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 2020,
@@ -30,4 +36,5 @@ export default [
       ],
     },
   },
+  
 ]
