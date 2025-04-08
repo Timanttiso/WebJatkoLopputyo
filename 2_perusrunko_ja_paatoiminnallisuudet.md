@@ -7,21 +7,24 @@ Sovellus-ympäristönä toimii  paikallinen virtuaalikone.
 
 ## 2. Backend
 
-Backendissä käytetään nodea ja express kirjastoa. Backendiin on tässä vaiheessa lisätty lisäys, poisto ja hakemis ominaisuudet kaikille taulukoille. Luodut taulukot on products ja shoppingCart. Product taulukossa on kaikki tuotteet, joita verkkokaupassa on myynnissä. ShoppingCartissa on kaikkia ostoskorissa olevat tuotteet. 
+Backendissä käytetään nodea ja express kirjastoa. Backendiin on tässä vaiheessa lisätty lisäys, poisto ja hakemis ominaisuudet kaikille taulukoille. Luodut taulukot on products ja shoppingCart. Product taulukossa on kaikki tuotteet, joita verkkokaupassa on myynnissä. ShoppingCartissa on kaikkia ostoskorissa olevat tuotteet. Kirjautuminen vaatii .env tiedoston backendin juureen.
 
 ## 3. Frontend
 
-Frontend toteutetaan Reactilla. Frontendissä on components kansio, joka sisältää sovelluksessa käytettävät komponentit. Frontendiin on tehty pääsivu, jossa on routeri, joka kuljettaa käyttäjää eri sivuille napeista, yms. Sivuja ohjelmassa on pääsivu, ostoskori, admin sivu, checkout sivu ja tuote sivu. Pääsivulta voi nähdä kaikki tuotteet, lisätä tuotteita ostoskoriin, hakea tuotteita, siirtyä ostoskorriin tai katsella tuotteen tietoja menemällä tuote sivulle klikkaamalla tuotetta. Ostoskorista voi katsella siellä olevia tuotteita, tuotteet voi maksaa ja tuotteita voi poistaa ostoskorista. Sivulla on headeri, josta voi aina palata takaisin etusivulle. admin sivulla on salasana ja sieltä voi lisätä tuotteita verkkokauppaan. Checkout sivu sisältää kiitoksen ostamisesta ja palauttaa käyttäjän takaisin etusivulle lyhyen ajan jälkeen. Tuote sivulta voi lisätä tuotteen ostoskoriin ja katsella sen tietoja.
+Frontend toteutetaan Reactilla. Frontendissä on components kansio, joka sisältää sovelluksessa käytettävät komponentit. Frontendiin on tehty pääsivu App.jsx, jossa on routeri, joka kuljettaa käyttäjää eri sivuille (esim. ostoskori painike). Sivuja ohjelmassa on pääsivu, ostoskori, admin sivu, checkout sivu ja tuote sivu. Pääsivulta voi nähdä kaikki tuotteet, lisätä tuotteita ostoskoriin, hakea tuotteita hakukentästä, siirtyä ostoskorriin tai katsella tuotteen tietoja menemällä tuote sivulle klikkaamalla tuotetta. Ostoskorista voi katsella siellä olevia tuotteita, tuotteet voi maksaa ja tuotteita voi poistaa ostoskorista. Sivulla on headeri (navigointi palkki), josta voi aina palata takaisin etusivulle painamalla "Verkkokauppa" tekstiä. Admin sivulle (tuotteen lisäys sivulla) on kirjauduttava ja sieltä voi lisätä tuotteita verkkokauppaan. Checkout sivu sisältää kiitoksen ostamisesta ja palauttaa käyttäjän takaisin etusivulle lyhyen ajan jälkeen. Tuote sivulta voi lisätä tuotteen ostoskoriin ja katsella sen tietoja.
 
 ## 4. Tietokanta
 
-Tietokanta on SQLite pohjainen. Tietokannassa on kaksi taulukkoa. Yksi tuotteille ja toinen ostoskorille. Kummassakin taulukossa on id, tuotteen-nimi, tuotteen hinta, tuotteen kuvaus ja linkki tuotteen kuvaan.
+Tietokanta on SQLite pohjainen. Tietokannassa on kolme taulukkoa. Yksi tuotteille, toinen ostoskorille kolmas käyttäjille. Kahdessa ensimmäisessä taulukossa on id, tuotteen-nimi, tuotteen hinta, tuotteen kuvaus ja linkki tuotteen kuvaan. Kolmannessa taulukossa käyttäjille on id, käyttäjätunnus ja salasana. Salasana on encryptattu.
+Admin sivulle voi kirjautua tunnuksilla:
+(root, salainen) = admin
+(Superuser, sakanikadik) = peruskäyttäjä
 
 ## 5. Perusrunko ja arkkitehtuuri
 
 Frontend:
-- sisältää components kansio, josta sovellusten osat tuodaan app.jsx tiedostoon. Kansiosta löytyy komponentteja, kuten: AdminPage, Header, product ja singleProudct.
-- sisältää services kansion, jossa olevissa tiedostoissa login ja products otetaan yhteys backendiin käyttäjiä ja tuotteita koskeavia toimintoja varten.
+- Sisältää components kansion, josta sovellusten osat tuodaan App.jsx tiedostoon. Kansiosta löytyy komponentteja, kuten: AdminPage, Header, Product ja singleProudct.
+- Sisältää services kansion, jossa olevissa tiedostoissa login ja products otetaan yhteys backendiin käyttäjiä ja tuotteita koskeavia toimintoja varten.
 
 ## 6. Toiminnallisuudet
 
@@ -37,4 +40,4 @@ Projektissa käytetään yksikkötestejä ja jos aika riittää kurmittavuustest
 
 ## 9. Käyttöliittymä ja vuorovaikutus
 
-Ohjelman pää käyttöliittymään tulee lista tuotteista. Ostoskoriin pääsee klikkaamalla ostoskori nappia. Ostoskorista pääsee takaisin klikkaamalla verkkokaupan nimeä headerissä. Ostoskorissa on lista tuotteista, joissa on poisto nappi, jotta tuotteet voi poistaa. Pääsivulla klikkaamalla tuotetta listassa se avaa tuotteen oman sivun, josta näkee tuotteen tietoja, kuten kuvaus, hinta ja nimi. Klikkaamalla lisää ostoskoriin nappia tuote menee ostoskoriin. Tuoteen sivulla klikkamalla takaisin nappia pääsee takaisin etusivulle.
+Ohjelman etusivuun tulee lista tuotteista. Ostoskoriin pääsee klikkaamalla ostoskori nappia. Ostoskorista pääsee takaisin klikkaamalla verkkokaupan nimeä headerissä. Ostoskorissa on lista tuotteista, joissa on poisto nappi, jotta tuotteet voi poistaa ostoskorista. Pääsivulla klikkaamalla tuotetta listassa se avaa tuotteen oman tuotesivun, josta näkee tuotteen tietoja, kuten kuvaus, hinta ja nimi. Klikkaamalla lisää ostoskoriin nappia tuote menee ostoskoriin. Tuotteen sivulla klikkamalla verkkokaupan nimeä pääsee takaisin etusivulle.
