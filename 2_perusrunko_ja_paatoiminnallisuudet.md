@@ -36,7 +36,7 @@ Koodi kirjoitetaan ja kommentoidaan mahdollisimman selkeästi.
 
 ## 8. Testaus ja virheenkäsittely
 
-Projektissa käytetään yksikkötestejä ja jos aika riittää kurmittavuustestejä (k6) ja end to end testejä, jotka toteutetaan playwrightilla.
+Projektissa käytetään yksikkötestejä ja jos aika riittää kurmittavuustestejä (k6) ja end to end testejä, jotka toteutetaan playwrightilla. Jos ei aika riitä tehdään ne mahdollisesti 3 vaiheessa.
 
 ## 9. Käyttöliittymä ja vuorovaikutus
 
