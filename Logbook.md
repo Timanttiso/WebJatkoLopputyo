@@ -13,8 +13,8 @@
 |  5.4.2025 | 1h | CSS ja tyyli | Parannuksia CSS:lle ja ulkonäölle usealle sivulle | Niko |
 |  7.4.2025 | 2h | Tokeni pohjainen kirjautuminen | Vain admin käyttäjä voi nyt lisätä tuotteita | Rami |
 |  8.4.2025 | 3h | Viimehetken parannuksia, dokumentoinnin viimeistely | Ostoskoriin tehty siellä olevien tuotteiden määrä painikkeeseen, yksi yksikkötesti, dokumentointia päivitetty | Yhdessä 6h |
-|  15.4.2025 | -h | - | - | Yhdessä -h |
+|  15.4.2025 | 3,2h | Hakukentän parannus, vaihe 3, vaihe 4 aloitus | Hakukentällä voi nyt hakea muualtakin, kuin vain etusivulta | Yhdessä 6,4h |
 
-Tunteja käytetty yhteensä yhdessä/erikseen: 27,5h \
-Tunteja käytetty yhteensä tunnit laskettuna erikseen: 43h \
-Tunteja käytetty per nenä: 21,5h
+Tunteja käytetty yhteensä yhdessä/erikseen: 30,7h \
+Tunteja käytetty yhteensä tunnit laskettuna erikseen: 49,4h \
+Tunteja käytetty per nenä: 24,7h
