@@ -9,17 +9,11 @@ const Filter = ({ findProduct }) => {
     const navigate = useNavigate();
     const handleSearch = (e) =>{
         e.preventDefault();
-
+        
         if(location.pathname != "/"){
             navigate("/");
         }
-        setTimeout(() => {
-            const input = document.querySelector("#search-bar input");
-            if (input) {
-                const fakeEvent = { target: { value: input.value } };
-                findProduct(fakeEvent);
-            }
-        }, 100);
+        
     };
     const handleKeyPress =(e) => {
         if (e.key === 'Enter') {
