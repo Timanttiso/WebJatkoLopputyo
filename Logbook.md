@@ -16,4 +16,4 @@
 |  15.4.2025 | -h | - | - | Yhdessä -h |
 
 Tunteja käytetty yhteensä: 27,5h 
-Tunteja per nenä: 39h
+Tunteja per nenä: 21,5h
