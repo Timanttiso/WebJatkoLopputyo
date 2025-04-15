@@ -5,6 +5,6 @@ Projektissa tehtiin verkkokauppa. Verkkokaupalla on viisi sivua: Etusivu, tuotes
 ## Käyttötapaukset
 | Käyttötapaus | Implementoitiinko? | demonstraatio/muistiinpanot |
 |----------|----------------------|------------------------|
-| |  |  |
+| Tuotteiden selaaminen| Kyllä | Implementoitiin hakemalla kaikki tuotteet etusivulle tietokannasta |
 |  |  |  |
 
