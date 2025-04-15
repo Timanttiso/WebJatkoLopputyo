@@ -15,6 +15,8 @@
 |  8.4.2025 | 3h | Viimehetken parannuksia, dokumentoinnin viimeistely | Ostoskoriin tehty siellä olevien tuotteiden määrä painikkeeseen, yksi yksikkötesti, dokumentointia päivitetty | Yhdessä 6h |
 |  15.4.2025 | 3,2h | Hakukentän parannus, vaihe 3, vaihe 4 aloitus | Ei olla varmoja onko vaihe 3 valmis. Hakukentällä voi nyt hakea muualtakin, kuin vain etusivulta. Esityksen dokumentaatiota on aloitettu. Yritimme laittaa nettisivua paikalliseen virtuaalikoneeseen, mutta se jäi kesken | Yhdessä 6,4h |
 |  15.4.2025 | 2,5 | Verkkokaupan yhteensopivuuden kehittämistä virtuaalikoneen kanssa ja sen asettamista virtuaalikoneeseen | Toimivuus onnistuneesti luotu virtuaalikoneen kanssa | Niko |
+|  15.4.2025 | 2,5 | Vaikkasama |  | rami |
+
 Käytetyt tunnit: 33,2h \
 Tunteja käytetty yhteensä (Yhdessä x 2 + erikseen): 49,4h \
 Tunteja käytetty per nenä ((Yhdessä x 2 + erikseen)/2): 24,7h
