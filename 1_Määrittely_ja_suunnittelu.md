@@ -1,6 +1,6 @@
 # 1. Vaihe - Määrittely ja suunnittelu
 
-Tässä tiedostossa käydään läpi projektin suunitelmaa. Projekti tulee olemaan verkkokauppa, jossa myydään tietotekniikka tuotteita ja tietokoneen osia.
+Tässä tiedostossa käydään läpi projektin suunnitelmaa. Projekti tulee olemaan verkkokauppa, jossa myydään tietotekniikka tuotteita ja tietokoneen osia.
 
 ## 1. Käyttäjä Persoonat
 
