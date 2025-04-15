@@ -15,6 +15,6 @@
 |  8.4.2025 | 3h | Viimehetken parannuksia, dokumentoinnin viimeistely | Ostoskoriin tehty siellä olevien tuotteiden määrä painikkeeseen, yksi yksikkötesti, dokumentointia päivitetty | Yhdessä 6h |
 |  15.4.2025 | -h | - | - | Yhdessä -h |
 
-Tunteja käytetty yhteensä yhdessä/erikseen: 27,5h /n
-Tunteja käytetty yhteensä tunnit laskettuna erikseen: 43h /n
+Tunteja käytetty yhteensä yhdessä/erikseen: 27,5h \n
+Tunteja käytetty yhteensä tunnit laskettuna erikseen: 43h \n
 Tunteja käytetty per nenä: 21,5h
