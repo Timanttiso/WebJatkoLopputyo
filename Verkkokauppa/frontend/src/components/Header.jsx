@@ -2,17 +2,42 @@ import React from 'react';
 import shoppingCartimage from "../icons/shoppingCart.png"
 import PropTypes from "prop-types";
 import searchIcon from "../icons/searchIcon.png"
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 const Filter = ({ findProduct }) => {
+    const navigate = useNavigate();
+    const handleSearch = (e) =>{
+        e.preventDefault();
+
+        if(location.pathname != "/"){
+            navigate("/");
+        }
+        setTimeout(() => {
+            const input = document.querySelector("#search-bar input");
+            if (input) {
+                const fakeEvent = { target: { value: input.value } };
+                findProduct(fakeEvent);
+            }
+        }, 100);
+    };
+    const handleKeyPress =(e) => {
+        if (e.key === 'Enter') {
+            handleSearch(e);
+        }
+    };
+
     return (
         <div id="search-bar">
-            <input onChange={findProduct} placeholder='Etsi Tuote'/>
-            <span class="icon"><img src={searchIcon} alt="🔍" /></span>
+            <input onChange={findProduct} onKeyDown={handleKeyPress} placeholder='Etsi Tuote'/>
+            <span className="icon" onClick={handleSearch} ><img src={searchIcon} alt="🔍" /></span>
         </div>
     );
 };
 
+Filter.propTypes = {
+    findProduct: PropTypes.func.isRequired,
+};
 
 const Header = ({ findProduct, user, handleLogout }) => {
 

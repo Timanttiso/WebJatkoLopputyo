@@ -13,6 +13,7 @@ import AdminPage from './components/AdminPage';
 const Products = ({ filteredProducts }) => {
     return (
         <div id='products'>
+            
             {filteredProducts.map((product) => (
                 <Product key={product.id} product={product} />
             ))}
@@ -25,7 +26,7 @@ function App() {
     const [filteredProducts, setFilteredProducts] = useState([])
     const [user, setUser] = useState(null);
     const [message, setMessage] = useState('');
-
+    const [errorMessage, seterrorMessage] = useState('');
     useEffect(() => {
         const loggedUserJSON = window.localStorage.getItem('loggedUser')
         if (loggedUserJSON) {
@@ -42,6 +43,7 @@ function App() {
                 console.error("Expected an array but got:", response)
             }
         }).catch(error => console.error("Error fetching products:", error))
+        
     }, [])
 
     const handleLogin = async (username, password) => {
@@ -68,12 +70,19 @@ function App() {
     }
 
     const findProduct = (event) => {
+        
         const updateProduct = products.filter(
             (product) =>
                 product.productName.toLowerCase().includes(event.target.value.toLowerCase()) ||
                 product.description.toLowerCase().includes(event.target.value.toLowerCase())
         );
         setFilteredProducts(updateProduct);
+        
+        if(updateProduct.length == 0){
+            seterrorMessage("Tuotteita ei löytynyt")
+        } else{
+            seterrorMessage("")
+        }
     };
 
     return (
@@ -86,6 +95,7 @@ function App() {
                             <Header findProduct={findProduct} user={user} handleLogout={handleLogout} />
                             {message && <p style={{ color: "green" }}>{message}</p>}
                             <h2>Tuotteet</h2>
+                            {errorMessage && <p className="error-message">{errorMessage}</p>}
                             <Products filteredProducts={filteredProducts} />
                         </>
                     } />
