@@ -10,7 +10,7 @@ export default function ShoppingCart() {
     const [amountinCart, setamountinCart] = useState("0");
     const fetchShoppingCart = async () => {
         try {
-            const response = await axios.get("http://localhost:3000/shoppingCart");
+            const response = await axios.get("http://localhost:3000/api/shoppingCart");
             setShoppingCart(response.data);
         } catch (err) {
             setError("Error fetching shoppingcart: " + (err.response?.data?.error || err.message));
@@ -27,7 +27,7 @@ export default function ShoppingCart() {
     const deleteFromShoppingCart = async (id, name) => {
         try {
             await axios.delete("http://localhost:3000/shoppingCart/" + id);
-            const response = await axios.get("http://localhost:3000/shoppingCart");
+            const response = await axios.get("http://localhost:3000/api/shoppingCart");
             setShoppingCart(response.data);
             const response2 = await axios.get("http://localhost:3000/shoppingCart/Count");
             setamountinCart(response.data.count);

@@ -25,7 +25,7 @@ const SingleProduct = () => {
         }
     }
     useEffect(() => {
-        axios.get(`http://localhost:3000/products/${id}`)
+        axios.get(`http://localhost:3000/api/products/${id}`)
             .then(response => serProduct(response.data))
             .catch(err => {
                 setError("Tuotetta ei löytynyt.")
