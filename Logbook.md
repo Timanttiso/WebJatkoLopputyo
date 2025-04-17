@@ -14,8 +14,9 @@
 |  7.4.2025 | 2h | Tokeni pohjainen kirjautuminen | Vain admin käyttäjä voi nyt lisätä tuotteita | Rami |
 |  8.4.2025 | 3h | Viimehetken parannuksia, dokumentoinnin viimeistely | Ostoskoriin tehty siellä olevien tuotteiden määrä painikkeeseen, yksi yksikkötesti, dokumentointia päivitetty | Yhdessä |
 |  15.4.2025 | 3,2h | Hakukentän parannus, vaihe 3, vaihe 4 aloitus | Ei olla varmoja onko vaihe 3 valmis. Hakukentällä voi nyt hakea muualtakin, kuin vain etusivulta. Esityksen dokumentaatiota on aloitettu. Yritimme laittaa nettisivua paikalliseen virtuaalikoneeseen, mutta se jäi kesken | Yhdessä |
-|  15.4.2025 | 2,5 | Verkkokaupan yhteensopivuuden kehittämistä virtuaalikoneen kanssa ja sen asettamista virtuaalikoneeseen | Toimivuus onnistuneesti luotu virtuaalikoneen kanssa | Niko |
-|  15.4.2025 | 2,5 | Verkkokaupan yhteensopivuus paikallisen virtuaalikoneen kanssa | Verkkokauppa toimii virtuaalikoneessa minimaalisin muutoksin | Rami |
+|  15.4.2025 | 2,5h | Verkkokaupan yhteensopivuuden kehittämistä virtuaalikoneen kanssa ja sen asettamista virtuaalikoneeseen | Toimivuus onnistuneesti luotu virtuaalikoneen kanssa | Niko |
+|  15.4.2025 | 2,5h | Verkkokaupan yhteensopivuus paikallisen virtuaalikoneen kanssa | Verkkokauppa toimii virtuaalikoneessa minimaalisin muutoksin | Rami |
+|  17.4.2025 | -h | Jostain syystä vm ei enää toimi, pyrin sitä korjaamaan | - | Rami |
 
 Käytetyt tunnit: 35,7h \
 Tunteja käytetty yhteensä (Yhdessä x 2 + erikseen): 58,4h \
