@@ -73,7 +73,7 @@ app.get('/users/:id', (req, res) => {
 
 // Toiminnot products tablelle
 // Nyt vain admin voi lisätä tuotteita
-app.post('/products',
+app.post('/api/products',
   middleware.userExtractor,
   middleware.adminOnly,
   (req, res) => {
@@ -92,7 +92,7 @@ app.post('/products',
   });
 });
 
-app.get('/products', (req, res) => {
+app.get('/api/products', (req, res) => {
   db.all('SELECT * FROM products', [], (err, row) => {
     if (err) {
       return res.status(500).json({ error: err.message });
@@ -101,7 +101,7 @@ app.get('/products', (req, res) => {
   });
 });
 
-app.get('/products/:id', (req, res) => {
+app.get('/api/products/:id', (req, res) => {
   const { id } = req.params;
   if (!id) {
     return res.status(400).json({ error: 'Kyseistä tuotetta ei ole' });
@@ -118,7 +118,7 @@ app.get('/products/:id', (req, res) => {
   });
 });
 
-app.put('/products/:id', (req, res) => {
+app.put('/api/products/:id', (req, res) => {
   const { productName, price, description, imageLink } = req.body;
   const { id } = req.params;
 
@@ -168,7 +168,7 @@ app.post('/shoppingCart', (req, res) => {
   });
 });
 
-app.get('/shoppingCart', (req, res) => {
+app.get('/api/shoppingCart', (req, res) => {
   db.all('SELECT * FROM shoppingCart', [], (err, rows) => {
     if (err) {
       return res.status(500).json({ error: err.message });
