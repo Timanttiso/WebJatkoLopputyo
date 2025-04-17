@@ -16,8 +16,8 @@
 |  15.4.2025 | 3,2h | Hakukentän parannus, vaihe 3, vaihe 4 aloitus | Ei olla varmoja onko vaihe 3 valmis. Hakukentällä voi nyt hakea muualtakin, kuin vain etusivulta. Esityksen dokumentaatiota on aloitettu. Yritimme laittaa nettisivua paikalliseen virtuaalikoneeseen, mutta se jäi kesken | Yhdessä |
 |  15.4.2025 | 2,5h | Verkkokaupan yhteensopivuuden kehittämistä virtuaalikoneen kanssa ja sen asettamista virtuaalikoneeseen | Toimivuus onnistuneesti luotu virtuaalikoneen kanssa | Niko |
 |  15.4.2025 | 2,5h | Verkkokaupan yhteensopivuus paikallisen virtuaalikoneen kanssa | Verkkokauppa toimii virtuaalikoneessa minimaalisin muutoksin | Rami |
-|  17.4.2025 | -h | Jostain syystä vm ei enää toimi, pyrin sitä korjaamaan | - | Rami |
+|  17.4.2025 | 1h | Jostain syystä vm ei enää toimi, pyrin sitä korjaamaan | Sain verkkokaupan toimimaan virtuaalikoneessa | Rami |
 
-Käytetyt tunnit: 35,7h \
-Tunteja käytetty yhteensä (Yhdessä x 2 + erikseen): 58,4h \
-Tunteja käytetty per nenä ((Yhdessä x 2 + erikseen)/2): 29,2h
+Käytetyt tunnit: 36,7h \
+Tunteja käytetty yhteensä (Yhdessä x 2 + erikseen): 59,4h \
+Tunteja käytetty per nenä ((Yhdessä x 2 + erikseen)/2): 29,7h
