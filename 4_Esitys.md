@@ -6,7 +6,7 @@ Projektissa tehtiin verkkokauppa. Verkkokaupalla on viisi sivua: Etusivu, tuotes
 | Käyttötapaus | Toteutettu? | demonstraatio/muistiinpanot |
 |----------|----------------------|------------------------|
 | Tuotteiden selaaminen| Kyllä | Toteutettiin hakemalla kaikki tuotteet etusivulle tietokannasta. |
-| Tuotteiden haku | kyllä | Toteutettiin antamalla käyttäjän filteröidä tuotteita nimen perusteella, hakukentän avulla. |
+| Tuotteiden haku | kyllä | Toteutettiin antamalla käyttäjän filteröidä tuotteita nimen tai kuvauksen perusteella, hakukentän avulla. |
 | Ostoskoriin lisääminen | Kyllä | Käyttäjä voi klikata lisää ostoskoriin etusivulta tai tuotesivulta.  |
 | Ostoskorista poistaminen | Kyllä | Käyttäjä voi poistaa ostoskorista tuotteita klikkaamalla "poista" nappia. |
 | Ostaminen/maksaminen | Kyllä | Käyttäjä voi klikata "Maksa tuotteet" nappia, joka vie checkout sivulle ja poistaa kaikki tuotteet ostoskorista. |
