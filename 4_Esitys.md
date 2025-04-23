@@ -3,14 +3,14 @@
 ## Projektin yleiskatsaus
 Projektissa tehtiin verkkokauppa. Verkkokaupalla on viisi sivua: Etusivu, tuotesivu, checkout, ostoskori ja adminsivu. 
 ## Käyttötapaukset
-| Käyttötapaus | Toteutettu? | demonstraatio/muistiinpanot |
-|----------|----------------------|------------------------|
-| Tuotteiden selaaminen| Kyllä | Toteutettiin hakemalla kaikki tuotteet etusivulle tietokannasta. Demo: 11:40|
-| Tuotteiden haku | kyllä | Toteutettiin antamalla käyttäjän filteröidä tuotteita nimen tai kuvauksen perusteella, hakukentän avulla. Demo: 12:00|
-| Ostoskoriin lisääminen | Kyllä | Käyttäjä voi klikata lisää ostoskoriin etusivulta tai tuotesivulta. Demo: 12:23 |
-| Ostoskorista poistaminen | Kyllä | Käyttäjä voi poistaa ostoskorista tuotteita klikkaamalla "poista" nappia. Demo: 12:43 |
-| Ostaminen/maksaminen | Kyllä | Käyttäjä voi klikata "Maksa tuotteet" nappia, joka vie checkout sivulle ja poistaa kaikki tuotteet ostoskorista. Demo: 12:54 |
-| Tuotteiden lisääminen | Kyllä | Kirjaumisen jälkeen voi lisätä tuotteita /admin sivulla. Demo: 13:23 |
+| Käyttötapaus | Toteutettu? | demonstraatio/muistiinpanot | Demo aikaleima |
+|----------|----------------------|------------------------|----------------------|
+| Tuotteiden selaaminen| Kyllä | Toteutettiin hakemalla kaikki tuotteet etusivulle tietokannasta. | 11:40 |
+| Tuotteiden haku | kyllä | Toteutettiin antamalla käyttäjän filteröidä tuotteita nimen tai kuvauksen perusteella, hakukentän avulla. | 12:00 |
+| Ostoskoriin lisääminen | Kyllä | Käyttäjä voi klikata lisää ostoskoriin etusivulta tai tuotesivulta. | 12:23 |
+| Ostoskorista poistaminen | Kyllä | Käyttäjä voi poistaa ostoskorista tuotteita klikkaamalla "poista" nappia. | 12:43 |
+| Ostaminen/maksaminen | Kyllä | Käyttäjä voi klikata "Maksa tuotteet" nappia, joka vie checkout sivulle ja poistaa kaikki tuotteet ostoskorista. | 12:54 |
+| Tuotteiden lisääminen | Kyllä | Kirjaumisen jälkeen voi lisätä tuotteita /admin sivulla. | 13:23 |
 | Tuotteiden muokkaaminen | Ei | Lisättyjä tuotteita ei voi muokata |
 | Tuotteiden poistaminen | Ei | Lisättyjä tuotteita ei voi poistaa |
 
