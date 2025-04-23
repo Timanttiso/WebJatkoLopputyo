@@ -21,10 +21,10 @@ Backendissä käytetään nodea ja express kirjastoa. Backendissä on lisäys, p
 
 
 ## Tuotanto prosessi
-
+Alussa suunnittelimme verkkokaupan ja kirjoitimme suunnittelu osioon kaikista oleellisimmat asiat aikataulun huomioon ottaen
 
 ## Pohdinta ja parannusehdotuksia
-Aloitimme projektin suunnittelemalla 
+
 
 ## Työpäiväkirja (logbook)
 | Päivämäärä  | Käytetyt tunnit | Aiheet |  Tulos | Kuka |
