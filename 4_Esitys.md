@@ -19,3 +19,14 @@ Projektissa tehtiin verkkokauppa. Verkkokaupalla on viisi sivua: Etusivu, tuotes
 Backendissä käytetään nodea ja express kirjastoa. Backendissä on lisäys, poisto ja hakemis ominaisuudet kaikille taulukoille, server.js tiedostossa. Luodut taulukot on products,shoppingCart ja users. Product taulukossa on kaikki tuotteet, joita verkkokaupassa on myynnissä. ShoppingCartissa on kaikkia ostoskorissa olevat tuotteet. Users kansiossa on käyttäjät. Kirjautuminen vaatii .env tiedoston backendin juureen.
 ### 2. Frontend
 
+
+## Tuotanto prosessi
+
+
+## Pohdinta ja parannusehdotuksia
+
+
+## Työpäiväkirja (logbook)
+
+
+## Esityksen linkki
