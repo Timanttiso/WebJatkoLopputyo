@@ -50,9 +50,10 @@ Projektissa tuotteiden näyttäminen etusivulla oli suhteellisen helppo toteutta
 |  15.4.2025 | 2,5h | Verkkokaupan yhteensopivuuden kehittämistä virtuaalikoneen kanssa ja sen asettamista virtuaalikoneeseen | Toimivuus onnistuneesti luotu virtuaalikoneen kanssa | Niko |
 |  15.4.2025 | 2,5h | Verkkokaupan yhteensopivuus paikallisen virtuaalikoneen kanssa | Verkkokauppa toimii virtuaalikoneessa minimaalisin muutoksin | Rami |
 |  17.4.2025 | 1h | Jostain syystä vm ei enää toimi, pyrin sitä korjaamaan | Sain verkkokaupan toimimaan virtuaalikoneessa | Rami |
+|  23.4.2025 | 2h | Esityksen valmistelua | Esitys on saatu tehtyä | Yhdessä |
 
-Käytetyt tunnit: 36,7h \
-Tunteja käytetty yhteensä (Yhdessä x 2 + erikseen): 59,4h \
-Tunteja käytetty per nenä ((Yhdessä x 2 + erikseen)/2): 29,7h
+Käytetyt tunnit: 38,7h \
+Tunteja käytetty yhteensä (Yhdessä x 2 + erikseen): 63,4h \
+Tunteja käytetty per nenä ((Yhdessä x 2 + erikseen)/2): 31,7h
 ## Esityksen linkki
 Linkki esitykseen: https://centriafi-my.sharepoint.com/:v:/g/personal/niko_asujamaa_centria_fi/ETvHNZ5B-DJAoVPzc9Hc2FUBwkIO9GNTnlX8io8EbDDgbQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=s622Ug
