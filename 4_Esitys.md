@@ -27,6 +27,8 @@ Backendissä käytetään nodea ja express kirjastoa. Backendissä on lisäys, p
 
 
 ## Työpäiväkirja (logbook)
-
+| Päivämäärä  | Käytetyt tunnit | Aiheet |  Tulos | Kuka |
+| :---        |     :---:       |     :---:       |     :---:      |     :---:      |
+|  |  |  |  |  |
 
 ## Esityksen linkki
