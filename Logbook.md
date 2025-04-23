@@ -17,6 +17,7 @@
 |  15.4.2025 | 2,5h | Verkkokaupan yhteensopivuuden kehittämistä virtuaalikoneen kanssa ja sen asettamista virtuaalikoneeseen | Toimivuus onnistuneesti luotu virtuaalikoneen kanssa | Niko |
 |  15.4.2025 | 2,5h | Verkkokaupan yhteensopivuus paikallisen virtuaalikoneen kanssa | Verkkokauppa toimii virtuaalikoneessa minimaalisin muutoksin | Rami |
 |  17.4.2025 | 1h | Jostain syystä vm ei enää toimi, pyrin sitä korjaamaan | Sain verkkokaupan toimimaan virtuaalikoneessa | Rami |
+|  23.4.2025 | -h | Esityksen valmistelua | - | Yhdessä |
 
 Käytetyt tunnit: 36,7h \
 Tunteja käytetty yhteensä (Yhdessä x 2 + erikseen): 59,4h \
