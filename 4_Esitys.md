@@ -26,6 +26,7 @@ Tietokanta on SQLite pohjainen. Tietokannassa on kolme taulukkoa. Yksi tuotteill
 Alussa suunnittelimme verkkokaupan ja kirjoitimme suunnittelu osioon kaikista oleellisimmat asiat aikataulun huomioon ottaen
 
 ## Pohdinta ja parannusehdotuksia
+Aikaan jota projektin toteuttamiseen oli verrattuna lopputuloksesta tuli mainio. Ohjelmaan olisi parannettavaa, esim. Parempi kuvan lisäys järjestelmä tuotteille. Tämän hetkinen kuvan lisäys järjestelmä on hyvin hidas ja manuaalinen. Toinen parannus idea olisi lisätä viimeiset kaksi käyttötapausta eli tuotteiden mukkaaminen ja tuotteiden poistaminen. 
 
 
 ## Työpäiväkirja (logbook)
